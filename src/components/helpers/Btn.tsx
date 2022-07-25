@@ -6,7 +6,6 @@ const Btn = (props: any) => {
     <Button
       size="lg"
       textStyle={"popM28"}
-      layerStyle={props.base2 ? "base2" : "base"}
       borderRadius={"10px"}
       px={10}
       py={8}

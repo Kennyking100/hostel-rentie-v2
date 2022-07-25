@@ -22,13 +22,7 @@ const Hero = () => {
         xl: "container.xl",
       }}
     >
-      <Flex
-        justifyContent={"space-between"}
-        // p={"x.100"}
-        pt={10}
-        alignItems="center"
-        pb={120}
-      >
+      <Flex justifyContent={"space-between"} pt={10} alignItems="center">
         <Box width={{ base: "100%", lg: "50%" }}>
           <Box
             textColor={"GreenLight"}
@@ -77,6 +71,7 @@ const Hero = () => {
               borderColor={"YellowLight"}
               textColor="GreenDarker"
               height="full"
+              boxShadow="5px 5px 15px #1D1D1D1A"
               _placeholder={{ fontSize: "20px", paddingLeft: "20px" }}
             />
             <Center
@@ -85,6 +80,7 @@ const Hero = () => {
               width={"90px"}
               height="full"
               cursor={"pointer"}
+              boxShadow="5px 5px 15px #1D1D1D26"
               _hover={{
                 background: "Hover.GreenLight",
               }}
