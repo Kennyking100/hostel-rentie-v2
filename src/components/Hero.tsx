@@ -46,12 +46,13 @@ const Hero = () => {
           </Text>
           <Btn
             mr={{ base: "0", sm: "50px" }}
-            base2
+            bg="GreenDark"
             width={{ base: "100%", sm: "max-content" }}
             mb={{ base: "1rem", sm: "0" }}
             _hover={{
               background: "Hover.GreenDark",
             }}
+            color={"white"}
           >
             Post a room
           </Btn>
@@ -60,6 +61,8 @@ const Hero = () => {
             _hover={{
               background: "Hover.GreenLight",
             }}
+            bg="GreenLight"
+            color={"white"}
           >
             Join a room
           </Btn>
