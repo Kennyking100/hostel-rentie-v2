@@ -26,7 +26,9 @@ const Hero = () => {
         <Box width={{ base: "100%", lg: "50%" }}>
           <Box
             textColor={"GreenLight"}
+            // size="4xl"
             fontSize={{ base: "2.25rem", sm: "3rem", lg: "4rem" }}
+            // lineHeight={{ base: "54px", sm: "72px", lg: "102px" }}
             fontWeight="medium"
             textAlign={{ base: "center", sm: "start" }}
             textShadow="5px 5px 15px #1D1D1D1A"
@@ -34,10 +36,10 @@ const Hero = () => {
             Do you need <br /> a roommate?
           </Box>
           <Text
-            textColor={"GreenDarker"}
-            fontSize={{ base: "lg", lg: "xl" }}
-            mt="32px"
-            mb={"60px"}
+            textColor={"Grey1D"}
+            fontSize={{ base: "lg", lg: "lg" }}
+            mt="47px"
+            mb={"70px"}
             textAlign={{ base: "center", sm: "start" }}
           >
             You can now get and pair room and apartments with people.
@@ -49,24 +51,26 @@ const Hero = () => {
             bg="GreenDark"
             width={{ base: "100%", sm: "max-content" }}
             mb={{ base: "1rem", sm: "0" }}
+            color={"white"}
+            fontSize={"1.3125rem"}
             _hover={{
               background: "Hover.GreenDark",
             }}
-            color={"white"}
           >
             Post a room
           </Btn>
           <Btn
             width={{ base: "100%", sm: "max-content" }}
+            bg="GreenLight"
+            color={"white"}
+            fontSize={"1.3125rem"}
             _hover={{
               background: "Hover.GreenLight",
             }}
-            bg="GreenLight"
-            color={"white"}
           >
             Join a room
           </Btn>
-          <Flex gap={10} alignItems="center" mt="100" height={"70px"}>
+          <Flex gap={10} alignItems="center" mt="84px" height={"62px"}>
             <Input
               placeholder="Search"
               border={`3px solid`}
@@ -80,7 +84,7 @@ const Hero = () => {
             <Center
               borderRadius={"100%"}
               bg="GreenLight"
-              width={"90px"}
+              width={"81px"}
               height="full"
               cursor={"pointer"}
               boxShadow="5px 5px 15px #1D1D1D26"
