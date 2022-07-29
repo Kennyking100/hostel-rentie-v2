@@ -18,11 +18,11 @@ const Newsletter = () => {
         borderRadius="20px"
         w={{ base: "100%", md: "80%" }}
         m="auto"
-        p={{ base: "31px", md: "31px 100px" }}
+        p={{ base: "31px", md: "52px 100px" }}
         textAlign="center"
         bg={"GreenLighter"}
         borderRight="20px"
-        mb={200}
+        mb={180}
         mt={"105px"}
       >
         <Heading as="h3" size="xl" color={"GreenDark"}>

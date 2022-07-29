@@ -44,6 +44,8 @@ const NavBar = () => {
               fontSize="xl"
               px={10}
               py={6}
+              bg="GreenLight"
+              color={"white"}
               _hover={{
                 background: "Hover.GreenLight",
               }}

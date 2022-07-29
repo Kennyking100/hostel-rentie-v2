@@ -16,7 +16,7 @@ export const theme = extendTheme({
   },
   colors: {
     GreenLight: "#01923F",
-    GreenLighter: "#01923F1A",
+    GreenLighter: "rgba(229, 240, 232)",
     GreenDarker: "#1d1d1d",
     GreenDark: "#144b34",
     YellowLight: "#EFE307",
@@ -29,49 +29,4 @@ export const theme = extendTheme({
   sizes: {
     navBarHeight: "92px",
   },
-  // layerStyles: {
-  //   base: {
-  //     backgroundColor: "#01923F",
-  //     color: "white",
-  //   },
-  //   base2: {
-  //     backgroundColor: "#144B34",
-  //     color: "white",
-  //   },
-  // },
-
-  // textStyles: {
-  //   popM90: {
-  //     fontWeight: "medium",
-  //     fontSize: "4rem",
-  //   },
-  //   popR24: {
-  //     fontWeight: "400",
-  //     fontSize: "1.25rem",
-  //   },
-  //   popL28: {
-  //     fontWeight: "light",
-  //     fontSize: "1.75rem",
-  //   },
-  //   popB60: {
-  //     fontWeight: "bold",
-  //     fontSize: "3.75rem",
-  //   },
-  //   popSM48: {
-  //     fontWeight: "semi-bold",
-  //     fontSize: "3rem",
-  //   },
-  //   popSM36: {
-  //     fontWeight: "semi-bold",
-  //     fontSize: "2.25rem",
-  //   },
-  //   popM32: {
-  //     fontWeight: "medium",
-  //     fontSize: "2rem",
-  //   },
-  //   popM28: {
-  //     fontWeight: "500",
-  //     fontSize: "1.3125rem",
-  //   },
-  // },
 });
