@@ -19,7 +19,7 @@ const Explore = () => {
       <Box
         position="relative"
         pt="10.125rem"
-        pb={{ base: "40rem", lg: "20rem" }}
+        pb={{ base: "40rem", lg: "17rem" }}
       >
         <Image
           src={bgImg}

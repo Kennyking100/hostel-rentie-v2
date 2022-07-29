@@ -13,14 +13,14 @@ const Details = () => {
         lg: "container.lg",
         xl: "container.xl",
       }}
-      mt={{ base: "-20rem", lg: "-5rem" }}
+      mt={{ base: "-20rem", lg: "0rem" }}
     >
       <Heading
         fontWeight={"bold"}
         color="GreenLight"
         textAlign="center"
-        mb="8.0625rem"
-        size={"3xl"}
+        mb="6rem"
+        size={{ base: "xl", md: "2xl" }}
       >
         Do You Know You Can?
       </Heading>

@@ -40,19 +40,19 @@ const DetailsCard: React.FC<Props> = ({
       textAlign={"center"}
       mb="3rem"
     >
-      <Heading as="h3" size="xl" fontWeight={"semibold"} color={headingColor}>
+      <Heading as="h3" size="lg" fontWeight={"semibold"} color={headingColor}>
         {headingText}
       </Heading>
       <Flex
         justifyContent={"center"}
-        width={"350px"}
-        h={"280px"}
-        mt="27px"
-        mb="47px"
+        width={"264px"}
+        h={"210px"}
+        mt="20px"
+        mb="36px"
       >
         {image}
       </Flex>
-      <Text color={subColor} fontSize="lg" fontStyle={"italic"}>
+      <Text color={subColor} fontSize="sm" fontStyle={"italic"}>
         {subText}
       </Text>
       <Btn
@@ -61,7 +61,7 @@ const DetailsCard: React.FC<Props> = ({
         {...btnProps}
         my="18px"
         px={16}
-        fontSize="28px"
+        fontSize={"1.3125rem"}
       >
         {btnText}
       </Btn>

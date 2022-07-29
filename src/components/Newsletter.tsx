@@ -16,19 +16,19 @@ const Newsletter = () => {
         boxShadow="5px 5px 25px"
         color={"#1D1D1D1A"}
         borderRadius="20px"
-        w={{ base: "100%", md: "70%" }}
+        w={{ base: "100%", md: "80%" }}
         m="auto"
         p={{ base: "31px", md: "31px 100px" }}
         textAlign="center"
         bg={"GreenLighter"}
         borderRight="20px"
         mb={200}
-        mt={"106px"}
+        mt={"105px"}
       >
-        <Heading as="h3" size="lg" color={"GreenDark"}>
+        <Heading as="h3" size="xl" color={"GreenDark"}>
           Our Newsletter
         </Heading>
-        <Text color="GreenDark" mt="29px" mb="44px">
+        <Text color="GreenDark" mt="22px" mb="33px">
           Subscribe to our email list to get the latest updates on apartments
         </Text>
         <Flex
@@ -42,7 +42,7 @@ const Newsletter = () => {
             borderRadius="35px"
             borderColor={"YellowLight"}
             textColor="GreenDarker"
-            height="70px"
+            height="62px"
             boxShadow="5px 5px 15px #1D1D1D1A"
             _placeholder={{ fontSize: "20px", paddingLeft: "20px" }}
             bg="white"
