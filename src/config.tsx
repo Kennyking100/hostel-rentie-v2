@@ -17,6 +17,7 @@ export const theme = extendTheme({
   },
   colors: {
     GreenLight: "#01923F",
+    GreenLighter: "#01923F1A",
     Hover: {
       GreenLight: "#01923Fdd",
       GreenDark: "#144b34dd",

@@ -37,6 +37,7 @@ const Explore = () => {
             fontWeight={"bold"}
             color="white"
             fontSize={{ base: "5xl", md: "6xl" }}
+            textAlign="center"
             position="relative"
             maxW={"max-content"}
             m={"auto"}
