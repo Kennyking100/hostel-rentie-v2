@@ -36,9 +36,9 @@ const Explore = () => {
           <Heading
             fontWeight={"bold"}
             color="white"
-            fontSize={{ base: "3xl", sm: "4xl", md: "6xl" }}
+            fontSize={{ base: "5xl", md: "6xl" }}
             position="relative"
-            width={"max-content"}
+            maxW={"max-content"}
             m={"auto"}
             mt={{ base: "3rem", lg: "auto" }}
           >
