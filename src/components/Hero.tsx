@@ -22,7 +22,12 @@ const Hero = () => {
         xl: "container.xl",
       }}
     >
-      <Flex justifyContent={"space-between"} pt={10} alignItems="center">
+      <Flex
+        justifyContent={"space-between"}
+        pt={10}
+        mb={"1rem"}
+        alignItems="center"
+      >
         <Box width={{ base: "100%", lg: "50%" }}>
           <Box
             textColor={"GreenLight"}

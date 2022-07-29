@@ -20,30 +20,30 @@ interface Props {
 
 const ExploreCard: React.FC<Props> = ({ name, price, imgSrc }) => {
   return (
-    <Box textAlign={"center"} maxW="690px">
+    <Box textAlign={"center"} maxW="516px" m={"auto"}>
       <Box
         border="3px solid #EFE307"
         borderRadius={"20px"}
-        p={{ base: "1rem", sm: "1.4375rem 2.5rem" }}
+        p={{ base: "1rem", sm: "1.4375rem 1.875rem" }}
       >
         <Image
           src={imgSrc}
           w={"100%"}
-          h={"320px"}
+          h={"240px"}
           borderRadius={"10px"}
           objectFit={"cover"}
         />
       </Box>
-      <Heading mt={"52px"} color="white" fontSize={{ base: "3xl", md: "4xl" }}>
+      <Heading mt={"39px"} color="white" fontSize={{ base: "xl", md: "4xl" }}>
         {name}
       </Heading>
       <Flex
-        justifyContent={"space-evenly"}
+        justifyContent={"space-between"}
         flexWrap="wrap"
         color={"white"}
-        mt="31px"
-        mb="53px"
-        fontSize={{ base: "md", lg: "md" }}
+        mt="24px"
+        mb="39.5px"
+        fontSize={{ base: "md", lg: "lg" }}
         fontWeight="500"
       >
         <Box as={"span"} pr={"22.5px"} borderRight="3px solid #EFE307">
@@ -75,6 +75,7 @@ const ExploreCard: React.FC<Props> = ({ name, price, imgSrc }) => {
             }}
             bg="GreenDark"
             boxShadow="5px 5px 15px #1D1D1D1A"
+            fontSize="1.3125rem"
           >
             View room
           </Btn>
@@ -88,6 +89,7 @@ const ExploreCard: React.FC<Props> = ({ name, price, imgSrc }) => {
           bg="white"
           color="#01923F"
           boxShadow="5px 5px 15px #1D1D1D1A"
+          fontSize="1.3125rem"
         >
           {price}
         </Btn>

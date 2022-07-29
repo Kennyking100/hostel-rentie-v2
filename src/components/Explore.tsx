@@ -16,13 +16,18 @@ const Explore = () => {
       }}
       p={0}
     >
-      <Box position="relative" pt="10rem" pb={{ base: "40rem", lg: "20rem" }}>
+      <Box
+        position="relative"
+        pt="10.125rem"
+        pb={{ base: "40rem", lg: "20rem" }}
+      >
         <Image
           src={bgImg}
           position="absolute"
           top={"0"}
           zIndex={"-1"}
           h="full"
+          w={"full"}
           objectFit={"cover"}
         />
         <Container
@@ -36,7 +41,7 @@ const Explore = () => {
           <Heading
             fontWeight={"bold"}
             color="white"
-            fontSize={{ base: "5xl", md: "6xl" }}
+            fontSize={{ base: "2rem", md: "3.25rem" }}
             textAlign="center"
             position="relative"
             maxW={"max-content"}
@@ -65,8 +70,8 @@ const Explore = () => {
           <Grid
             templateColumns={{ base: "1fr", lg: "1fr 1fr" }}
             columnGap={"10rem"}
-            rowGap={{ base: "7rem", md: "12rem" }}
-            mt="180px"
+            rowGap={{ base: "7rem", md: "10rem" }}
+            mt="10.375rem"
           >
             <ExploreCard
               name="Queens Hostel"
@@ -96,7 +101,7 @@ const Explore = () => {
             fontSize={"4xl"}
             m="auto"
             w={"max-content"}
-            mt={115}
+            mt={"10rem"}
           >
             {"View more >>"}
           </Box>
