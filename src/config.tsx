@@ -17,6 +17,7 @@ export const theme = extendTheme({
   colors: {
     GreenLight: "#01923F",
     GreenLighter: "rgba(229, 240, 232)",
+    GreenLightest: "rgba(242,	248,	244	)",
     GreenDarker: "#1d1d1d",
     GreenDark: "#144b34",
     YellowLight: "#EFE307",

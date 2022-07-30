@@ -8,7 +8,8 @@ const SearchHero = () => {
     <Flex mb="5.625rem" justifyContent={"space-between"} alignItems="center">
       <Box width={{ base: "100%", lg: "47%" }}>
         <Heading
-          fontSize={{ base: "2.875rem", sm: "3.75rem", lg: "5.625rem" }}
+          // fontSize={{ base: "2.875rem", sm: "3.75rem", lg: "5.625rem" }}
+          size={"4xl"}
           textShadow="5px 5px 15px #1D1D1D1A"
           color={"GreenLight"}
           fontWeight="medium"
