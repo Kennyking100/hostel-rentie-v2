@@ -25,10 +25,10 @@ const Newsletter = () => {
         mb={180}
         mt={"105px"}
       >
-        <Heading as="h3" size="xl" color={"GreenDark"}>
+        <Heading as="h3" size="xl" fontWeight={"semibold"} color={"GreenDark"}>
           Our Newsletter
         </Heading>
-        <Text color="GreenDark" mt="22px" mb="33px">
+        <Text color="GreenDark" mt="22px" mb="33px" fontStyle={"italic"}>
           Subscribe to our email list to get the latest updates on apartments
         </Text>
         <Flex

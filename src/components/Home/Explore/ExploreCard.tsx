@@ -34,7 +34,12 @@ const ExploreCard: React.FC<Props> = ({ name, price, imgSrc }) => {
           objectFit={"cover"}
         />
       </Box>
-      <Heading mt={"39px"} color="white" fontSize={{ base: "xl", md: "4xl" }}>
+      <Heading
+        mt={"39px"}
+        color="white"
+        fontWeight={"semibold"}
+        fontSize={{ base: "xl", md: "4xl" }}
+      >
         {name}
       </Heading>
       <Flex
