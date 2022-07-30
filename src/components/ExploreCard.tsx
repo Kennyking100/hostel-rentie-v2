@@ -22,14 +22,14 @@ const ExploreCard: React.FC<Props> = ({ name, price, imgSrc }) => {
   return (
     <Box textAlign={"center"} maxW="516px" m={"auto"}>
       <Box
-        border="3px solid #EFE307"
+        border="2.25px solid #EFE307"
         borderRadius={"20px"}
-        p={{ base: "1rem", sm: "1.4375rem 1.875rem" }}
+        p={{ base: "1rem", sm: "1.125rem 1.875rem" }}
       >
         <Image
           src={imgSrc}
           w={"100%"}
-          h={"240px"}
+          h={"264px"}
           borderRadius={"10px"}
           objectFit={"cover"}
         />
@@ -46,13 +46,13 @@ const ExploreCard: React.FC<Props> = ({ name, price, imgSrc }) => {
         fontSize={{ base: "md", lg: "lg" }}
         fontWeight="500"
       >
-        <Box as={"span"} pr={"22.5px"} borderRight="3px solid #EFE307">
+        <Box as={"span"} pr={"22.5px"} borderRight="2.25px solid #EFE307">
           1 bedroom
         </Box>
-        <Box as={"span"} pr={"22.5px"} borderRight="3px solid #EFE307">
+        <Box as={"span"} pr={"22.5px"} borderRight="2.25px solid #EFE307">
           Shared toilet
         </Box>
-        <Box as={"span"} pr={"22.5px"} borderRight="3px solid #EFE307">
+        <Box as={"span"} pr={"22.5px"} borderRight="2.25px solid #EFE307">
           Shared Kitchen
         </Box>
         <Box as={"span"} fontWeight={"bold"}>

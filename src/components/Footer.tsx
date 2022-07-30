@@ -22,8 +22,9 @@ const Footer = () => {
           textColor={"white"}
           flexWrap="wrap"
           justifyContent={"space-between"}
+          pb="27px"
         >
-          <Box w={boxW} my="27px">
+          <Box w={boxW} mt="27px">
             <Box
               fontWeight={"semibold"}
               fontSize={{ base: "1.25rem", md: "1.5rem" }}
@@ -36,7 +37,7 @@ const Footer = () => {
               Rentie Ltd. 2021
             </Text>
           </Box>
-          <Box w={boxW} my="27px" fontSize={subs}>
+          <Box w={boxW} mt="27px" fontSize={subs}>
             <Box fontWeight={"semibold"} mb={titleMb}>
               Legal
             </Box>
@@ -44,7 +45,7 @@ const Footer = () => {
             <Text>Terms and conditions</Text>
             <Text>Cookies Policy</Text>
           </Box>
-          <Box w={boxW} fontSize={subs} my="27px">
+          <Box w={boxW} fontSize={subs} mt="27px">
             <Box fontWeight={"semibold"} mb={titleMb}>
               Contact
             </Box>
@@ -52,7 +53,7 @@ const Footer = () => {
             <Text>support@hostelrentie.com</Text>
             <Text>+234-81106-474-09</Text>
           </Box>
-          <Box w={boxW} fontSize={subs} my="27px">
+          <Box w={boxW} fontSize={subs} mt="27px">
             <Box fontWeight={"semibold"} mb={titleMb}>
               Company
             </Box>
@@ -60,14 +61,14 @@ const Footer = () => {
             <Text>Explore</Text>
             <Text>Locations</Text>
           </Box>
-          <Box w={boxW} fontSize={subs} my="27px">
+          <Box w={boxW} fontSize={subs} mt="27px">
             <Box fontWeight={"semibold"} mb={titleMb}>
               Learn
             </Box>
             <Text>Blog</Text>
             <Text>FAQ</Text>
           </Box>
-          <Flex gap={"2rem"} w={boxW} my="27px">
+          <Flex gap={"2rem"} w={boxW} mt="27px">
             <Icon as={FaFacebookF} w={iconSize} h={iconSize} />
             <Icon as={FaTwitter} w={iconSize} h={iconSize} />
             <Icon as={FaInstagram} w={iconSize} h={iconSize} />
