@@ -16,6 +16,7 @@ interface Props {
       background: string;
     };
   };
+  clickHandler: () => void;
 }
 
 const DetailsCard: React.FC<Props> = ({
@@ -27,6 +28,7 @@ const DetailsCard: React.FC<Props> = ({
   image,
   subColor,
   border,
+  clickHandler,
 }) => {
   return (
     <Flex
@@ -62,6 +64,7 @@ const DetailsCard: React.FC<Props> = ({
         my="18px"
         px={16}
         fontSize={"1.3125rem"}
+        onClick={clickHandler}
       >
         {btnText}
       </Btn>

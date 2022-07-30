@@ -1,4 +1,4 @@
-import { Box, Container, Grid, Heading, Image } from "@chakra-ui/react";
+import { Box, Container, Flex, Heading, Image } from "@chakra-ui/react";
 import React from "react";
 import bgImg from "../../../assets/home/explore-bg-image.svg";
 import ExploreCard from "./ExploreCard";
@@ -6,8 +6,11 @@ import Hostel1 from "../../../assets/home/hostel-image1.png";
 import Hostel2 from "../../../assets/home/hostel-image2.png";
 import Hostel3 from "../../../assets/home/hostel-image3.png";
 import Hostel4 from "../../../assets/home/hostel-image4.png";
+import { useNavigate } from "react-router-dom";
 
 const Explore = () => {
+  const navigate = useNavigate();
+
   return (
     <Container
       maxW={{
@@ -67,12 +70,8 @@ const Explore = () => {
               right={"0"}
             />
           </Heading>
-          <Grid
-            templateColumns={{ base: "1fr", lg: "1fr 1fr" }}
-            columnGap={"10rem"}
-            rowGap={{ base: "7rem", md: "10rem" }}
-            mt="10.375rem"
-          >
+
+          <Flex mt="10.375rem" justifyContent={"space-between"} flexWrap="wrap">
             <ExploreCard
               name="Queens Hostel"
               price="N 138,000"
@@ -93,7 +92,7 @@ const Explore = () => {
               price="N 300,000"
               imgSrc={Hostel4}
             />
-          </Grid>
+          </Flex>
           <Box
             fontWeight={"500"}
             textDecor="underline"
@@ -102,6 +101,7 @@ const Explore = () => {
             m="auto"
             w={"max-content"}
             mt={"10rem"}
+            onClick={() => navigate("/search")}
           >
             {"View more >>"}
           </Box>

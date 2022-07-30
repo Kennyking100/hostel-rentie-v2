@@ -8,11 +8,14 @@ import {
   Text,
 } from "@chakra-ui/react";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import HeroImage from "../../../assets/home/hero-image.svg";
 import SearchIcon from "../../../assets/home/search-icon.svg";
 import Btn from "../../helpers/Btn";
 
 const Hero = () => {
+  const navigate = useNavigate();
+
   return (
     <Container
       maxW={{
@@ -56,9 +59,11 @@ const Hero = () => {
             _hover={{
               background: "Hover.GreenDark",
             }}
+            onClick={() => navigate("/find-roommate")}
           >
             Post a room
           </Btn>
+
           <Btn
             width={{ base: "100%", sm: "max-content" }}
             bg="GreenLight"
@@ -67,9 +72,11 @@ const Hero = () => {
             _hover={{
               background: "Hover.GreenLight",
             }}
+            onClick={() => navigate("/search")}
           >
             Join a room
           </Btn>
+
           <Flex gap={10} alignItems="center" mt="84px" height={"62px"}>
             <Input
               placeholder="Search"
@@ -91,6 +98,7 @@ const Hero = () => {
               _hover={{
                 background: "Hover.GreenLight",
               }}
+              onClick={() => navigate("/search")}
             >
               <Image src={SearchIcon} width={"21px"} height={"21px"} />
             </Center>

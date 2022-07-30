@@ -3,8 +3,11 @@ import React from "react";
 import DetailsCard from "./DetailsCard";
 import { ReactComponent as ApplyIcon } from "../../../assets/home/apply-details.svg";
 import { ReactComponent as ShareIcon } from "../../../assets/home/share-details.svg";
+import { useNavigate } from "react-router-dom";
 
 const Details = () => {
+  const navigate = useNavigate();
+
   return (
     <Container
       maxW={{
@@ -40,6 +43,7 @@ const Details = () => {
               background: "Hover.GreenDark",
             },
           }}
+          clickHandler={() => navigate("/search")}
         />
         <DetailsCard
           headingText="Share room with partner(s)"
@@ -55,6 +59,7 @@ const Details = () => {
               background: "Hover.GreenLight",
             },
           }}
+          clickHandler={() => navigate("/find-roommate")}
         />
       </Flex>
     </Container>

@@ -11,6 +11,7 @@ import {
 import React from "react";
 import Btn from "../../helpers/Btn";
 import { MdFavorite } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
 
 interface Props {
   name: string;
@@ -19,6 +20,8 @@ interface Props {
 }
 
 const ExploreCard: React.FC<Props> = ({ name, price, imgSrc }) => {
+  const navigate = useNavigate();
+
   return (
     <Box
       textAlign={"center"}
@@ -90,6 +93,7 @@ const ExploreCard: React.FC<Props> = ({ name, price, imgSrc }) => {
             bg="GreenDark"
             boxShadow="5px 5px 15px #1D1D1D1A"
             fontSize={{ base: "1.125rem", md: "1.3125rem" }}
+            onClick={() => navigate("/search/new")}
           >
             View room
           </Btn>
