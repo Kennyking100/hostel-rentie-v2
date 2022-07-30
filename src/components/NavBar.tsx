@@ -13,7 +13,7 @@ import Hamburger from "./helpers/Hamburger";
 
 const NavBar = () => {
   return (
-    <Box boxShadow="lg" h={"navBarHeight"}>
+    <Box boxShadow="lg" h={"navBarHeight"} mb="3.375rem">
       <Container
         maxW={{
           base: "container.sm",
