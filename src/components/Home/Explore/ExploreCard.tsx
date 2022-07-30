@@ -20,7 +20,12 @@ interface Props {
 
 const ExploreCard: React.FC<Props> = ({ name, price, imgSrc }) => {
   return (
-    <Box textAlign={"center"} maxW="516px" m={"auto"}>
+    <Box
+      textAlign={"center"}
+      w="full"
+      maxW={{ base: "100%", lg: "45%" }}
+      mb="10.25rem"
+    >
       <Box
         border="2.25px solid #EFE307"
         borderRadius={"20px"}
@@ -34,22 +39,18 @@ const ExploreCard: React.FC<Props> = ({ name, price, imgSrc }) => {
           objectFit={"cover"}
         />
       </Box>
-      <Heading
-        mt={"39px"}
-        color="white"
-        fontWeight={"semibold"}
-        fontSize={{ base: "xl", md: "4xl" }}
-      >
+      <Heading mt={"39px"} color="white" fontWeight={"semibold"} size="xl">
         {name}
       </Heading>
       <Flex
-        justifyContent={"space-between"}
+        justifyContent={"space-evenly"}
         flexWrap="wrap"
         color={"white"}
         mt="24px"
         mb="39.5px"
         fontSize={{ base: "md", lg: "lg" }}
         fontWeight="500"
+        gap={"0.4rem"}
       >
         <Box as={"span"} pr={"22.5px"} borderRight="2.25px solid #EFE307">
           1 bedroom
@@ -66,12 +67,20 @@ const ExploreCard: React.FC<Props> = ({ name, price, imgSrc }) => {
       </Flex>
 
       <Grid
-        templateColumns={{ base: "1fr max-content", md: "2fr 1fr max-content" }}
+        templateColumns={{
+          base: "1fr max-content",
+          md: "2fr 1fr max-content",
+          lg: "1fr max-content",
+          xl: "2fr 1fr max-content",
+        }}
         color={"white"}
         gap="25px"
         templateRows={"75px"}
       >
-        <GridItem colSpan={{ base: 2, md: 1 }} rowStart={{ base: 2, md: 1 }}>
+        <GridItem
+          colSpan={{ base: 2, md: 1, lg: 2, xl: 1 }}
+          rowStart={{ base: 2, md: 1, lg: 2, xl: 1 }}
+        >
           <Btn
             h={"full"}
             w={"full"}
@@ -80,7 +89,7 @@ const ExploreCard: React.FC<Props> = ({ name, price, imgSrc }) => {
             }}
             bg="GreenDark"
             boxShadow="5px 5px 15px #1D1D1D1A"
-            fontSize="1.3125rem"
+            fontSize={{ base: "1.125rem", md: "1.3125rem" }}
           >
             View room
           </Btn>
@@ -94,7 +103,7 @@ const ExploreCard: React.FC<Props> = ({ name, price, imgSrc }) => {
           bg="white"
           color="#01923F"
           boxShadow="5px 5px 15px #1D1D1D1A"
-          fontSize="1.3125rem"
+          fontSize={{ base: "1.125rem", md: "1.3125rem" }}
         >
           {price}
         </Btn>

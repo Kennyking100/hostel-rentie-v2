@@ -1,16 +1,6 @@
-import {
-  Box,
-  Container,
-  Flex,
-  Heading,
-  Image,
-  Select,
-  Text,
-} from "@chakra-ui/react";
+import { Box, Container } from "@chakra-ui/react";
 import React from "react";
-import SearchBtn from "../helpers/SearchBtn";
 import Layout from "../Layout";
-import Btn from "../helpers/Btn";
 import Newsletter from "../Home/Newsletter";
 import SearchResult from "./SearchResult";
 import SearchHero from "./SearchHero";
@@ -31,7 +21,9 @@ const SearchPage = () => {
         <SearchFilter />
       </Container>
       <SearchResult />
-      <Newsletter />
+      <Box mt={{ base: "-25rem", lg: "0rem" }}>
+        <Newsletter />
+      </Box>
     </Layout>
   );
 };

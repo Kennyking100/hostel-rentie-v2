@@ -1,4 +1,4 @@
-import { Box, Container, Grid, Heading, Image } from "@chakra-ui/react";
+import { Box, Container, Flex, Heading, Image } from "@chakra-ui/react";
 import React from "react";
 import ExploreCard from "../Home/Explore/ExploreCard";
 import Hostel1 from "../../assets/home/hostel-image1.png";
@@ -20,7 +20,7 @@ const SearchResult = () => {
       <Box
         position="relative"
         pt="6.5625rem"
-        pb={{ base: "40rem", lg: "17rem" }}
+        pb={{ base: "30rem", lg: "17rem" }}
       >
         <Image
           src={bgImg2}
@@ -42,7 +42,7 @@ const SearchResult = () => {
           <Heading
             fontWeight={"bold"}
             color="white"
-            fontSize={{ base: "2rem", md: "3.25rem" }}
+            fontSize={{ base: "2.375rem", md: "3.375rem" }}
             textAlign="center"
             position="relative"
             maxW={"max-content"}
@@ -53,27 +53,22 @@ const SearchResult = () => {
             <Box
               position="absolute"
               height={"2.5px"}
-              width={"70%"}
+              width={{ base: "70%", md: "90%" }}
               backgroundColor={"#EFE307"}
-              ml={"-34px"}
-              bottom="-15px"
+              ml={{ base: "-14px", md: "-60px" }}
+              bottom="-18px"
             />
             <Box
               position="absolute"
               height={"2.5px"}
-              width={"70%"}
+              width={{ base: "70%", md: "90%" }}
               backgroundColor={"#EFE307"}
-              mr={"20px"}
-              bottom="-37.5px"
+              mr={{ base: "-14px", md: "-60px" }}
+              bottom="-32.5px"
               right={"0"}
             />
           </Heading>
-          <Grid
-            templateColumns={{ base: "1fr", lg: "1fr 1fr" }}
-            columnGap={"10rem"}
-            rowGap={{ base: "7rem", md: "10rem" }}
-            mt="10.375rem"
-          >
+          <Flex mt="10.375rem" justifyContent={"space-between"} flexWrap="wrap">
             <ExploreCard
               name="Queens Hostel"
               price="N 138,000"
@@ -94,7 +89,7 @@ const SearchResult = () => {
               price="N 300,000"
               imgSrc={Hostel4}
             />
-          </Grid>
+          </Flex>
         </Container>
       </Box>
     </Container>

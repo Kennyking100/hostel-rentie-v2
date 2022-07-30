@@ -5,11 +5,11 @@ import { BsFillCaretDownFill } from "react-icons/bs";
 
 const SearchFilter = () => {
   return (
-    <Box w="60%">
+    <Box width={{ base: "100%", lg: "60%" }}>
       <Heading
         fontWeight={"medium"}
         color="GreenLight"
-        fontSize="2.8125rem"
+        size={"2xl"}
         position="relative"
         maxW={"max-content"}
         mb="3.5rem"
@@ -19,15 +19,15 @@ const SearchFilter = () => {
         <Box
           position="absolute"
           height={"2.5px"}
-          width={"110%"}
+          width={{ base: "70%", md: "110%" }}
           backgroundColor={"#EFE307"}
         />
         <Box
           position="absolute"
           height={"2.5px"}
-          width={"110%"}
+          width={{ base: "70%", md: "110%" }}
           backgroundColor={"#EFE307"}
-          mr={"20px"}
+          mr={{ base: "5rem", md: "20px" }}
           bottom="-1rem"
           right={"-50%"}
         />
