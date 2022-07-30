@@ -8,9 +8,9 @@ import {
   Text,
 } from "@chakra-ui/react";
 import React from "react";
-import HeroImage from "../assets/home/hero-image.svg";
-import SearchIcon from "../assets/home/search-icon.svg";
-import Btn from "./helpers/Btn";
+import HeroImage from "../../../assets/home/hero-image.svg";
+import SearchIcon from "../../../assets/home/search-icon.svg";
+import Btn from "../../helpers/Btn";
 
 const Hero = () => {
   return (

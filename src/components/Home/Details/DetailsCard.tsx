@@ -1,6 +1,6 @@
 import { Flex, Heading, Text } from "@chakra-ui/react";
 import React from "react";
-import Btn from "./helpers/Btn";
+import Btn from "../../helpers/Btn";
 
 interface Props {
   headingText: string;

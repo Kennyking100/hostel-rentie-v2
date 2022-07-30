@@ -1,8 +1,8 @@
 import { Container, Flex, Heading } from "@chakra-ui/react";
 import React from "react";
 import DetailsCard from "./DetailsCard";
-import { ReactComponent as ApplyIcon } from "../assets/home/apply-details.svg";
-import { ReactComponent as ShareIcon } from "../assets/home/share-details.svg";
+import { ReactComponent as ApplyIcon } from "../../../assets/home/apply-details.svg";
+import { ReactComponent as ShareIcon } from "../../../assets/home/share-details.svg";
 
 const Details = () => {
   return (

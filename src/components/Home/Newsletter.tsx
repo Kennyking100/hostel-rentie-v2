@@ -1,6 +1,6 @@
 import { Box, Container, Flex, Heading, Input, Text } from "@chakra-ui/react";
 import React from "react";
-import Btn from "./helpers/Btn";
+import Btn from "../helpers/Btn";
 
 const Newsletter = () => {
   return (

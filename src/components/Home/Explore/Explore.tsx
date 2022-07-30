@@ -1,11 +1,11 @@
 import { Box, Container, Grid, Heading, Image } from "@chakra-ui/react";
 import React from "react";
-import bgImg from "../assets/home/explore-bg-image.svg";
+import bgImg from "../../../assets/home/explore-bg-image.svg";
 import ExploreCard from "./ExploreCard";
-import Hostel1 from "../assets/home/hostel-image1.png";
-import Hostel2 from "../assets/home/hostel-image2.png";
-import Hostel3 from "../assets/home/hostel-image3.png";
-import Hostel4 from "../assets/home/hostel-image4.png";
+import Hostel1 from "../../../assets/home/hostel-image1.png";
+import Hostel2 from "../../../assets/home/hostel-image2.png";
+import Hostel3 from "../../../assets/home/hostel-image3.png";
+import Hostel4 from "../../../assets/home/hostel-image4.png";
 
 const Explore = () => {
   return (
