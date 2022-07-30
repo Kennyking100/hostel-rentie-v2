@@ -15,7 +15,7 @@ const Recommendation = () => {
       }}
       borderRadius={"20px"}
       backgroundImage="linear-gradient(#144B34, #01923F)"
-      p={16}
+      p={{ base: 4, sm: 16 }}
       pb={0}
       mb="10rem"
     >

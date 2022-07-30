@@ -7,7 +7,11 @@ import Hostel3 from "../../assets/home/hostel-image3.png";
 import Hostel4 from "../../assets/home/hostel-image4.png";
 import bgImg2 from "../../assets/search/search-bg-image.svg";
 
-const SearchResult = () => {
+interface Props {
+  headerComponent?: JSX.Element;
+}
+
+const SearchResult: React.FC<Props> = ({ headerComponent }) => {
   return (
     <Container
       maxW={{
@@ -39,35 +43,41 @@ const SearchResult = () => {
             xl: "container.xl",
           }}
         >
-          <Heading
-            fontWeight={"bold"}
-            color="white"
-            fontSize={{ base: "2.375rem", md: "3.375rem" }}
-            textAlign="center"
-            position="relative"
-            maxW={"max-content"}
-            m={"auto"}
-            mt={{ base: "3rem", lg: "auto" }}
-          >
-            Search Results
-            <Box
-              position="absolute"
-              height={"2.5px"}
-              width={{ base: "70%", md: "90%" }}
-              backgroundColor={"#EFE307"}
-              ml={{ base: "-14px", md: "-60px" }}
-              bottom="-18px"
-            />
-            <Box
-              position="absolute"
-              height={"2.5px"}
-              width={{ base: "70%", md: "90%" }}
-              backgroundColor={"#EFE307"}
-              mr={{ base: "-14px", md: "-60px" }}
-              bottom="-32.5px"
-              right={"0"}
-            />
-          </Heading>
+          {headerComponent ? (
+            <>{headerComponent}</>
+          ) : (
+            <>
+              <Heading
+                fontWeight={"bold"}
+                color="white"
+                fontSize={{ base: "2.375rem", md: "3.375rem" }}
+                textAlign="center"
+                position="relative"
+                maxW={"max-content"}
+                m={"auto"}
+                mt={{ base: "3rem", lg: "auto" }}
+              >
+                Search Results
+                <Box
+                  position="absolute"
+                  height={"2.5px"}
+                  width={{ base: "70%", md: "90%" }}
+                  backgroundColor={"#EFE307"}
+                  ml={{ base: "-14px", md: "-60px" }}
+                  bottom="-18px"
+                />
+                <Box
+                  position="absolute"
+                  height={"2.5px"}
+                  width={{ base: "70%", md: "90%" }}
+                  backgroundColor={"#EFE307"}
+                  mr={{ base: "-14px", md: "-60px" }}
+                  bottom="-32.5px"
+                  right={"0"}
+                />
+              </Heading>
+            </>
+          )}
           <Flex mt="10.375rem" justifyContent={"space-between"} flexWrap="wrap">
             <ExploreCard
               name="Queens Hostel"
