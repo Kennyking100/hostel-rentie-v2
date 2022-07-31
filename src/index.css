@@ -43,6 +43,23 @@ svg {
   border-radius: 20px;
 }
 
+.swiper-pagination-bullet-active {
+  background-color: #01923f !important;
+}
+@media (max-width: 768px) {
+  .swiper-slide img {
+    border-radius: 0;
+  }
+  .swiper-pagination-bullet-active {
+    background-color: #efe307 !important;
+  }
+}
+/* .swiper-slide-active {
+  width: 100% !important;
+}
+.swiper-slide-next {
+  width: 20% !important;
+} */
 .swiper-slide {
   width: 80%;
 }

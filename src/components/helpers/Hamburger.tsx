@@ -2,12 +2,14 @@ import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
 import {
   Button,
   Container,
+  Link,
   Menu,
   MenuButton,
   MenuList,
   Text,
 } from "@chakra-ui/react";
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 const Hamburger = () => {
   const [open, setOpen] = useState(false);
@@ -35,6 +37,7 @@ const Hamburger = () => {
         borderRadius="none"
         pb={10}
         shadow="md"
+        zIndex={2}
       >
         <Container
           maxW={{
@@ -44,15 +47,45 @@ const Hamburger = () => {
             xl: "container.xl",
           }}
         >
-          <Text fontSize="lg" py={2}>
-            Home
-          </Text>
-          <Text fontSize="lg" py={2}>
-            Search
-          </Text>
-          <Text fontSize="lg" py={2}>
-            Saves
-          </Text>
+          <Link
+            as={NavLink}
+            to="/"
+            _activeLink={{
+              color: "GreenLight",
+              borderBottom: "1px solid",
+              borderColor: "YellowLight",
+            }}
+          >
+            <Text fontSize="lg" py={2}>
+              Home
+            </Text>
+          </Link>
+          <Link
+            as={NavLink}
+            to="/search"
+            _activeLink={{
+              color: "GreenLight",
+              borderBottom: "1px solid",
+              borderColor: "YellowLight",
+            }}
+          >
+            <Text fontSize="lg" py={2}>
+              Search
+            </Text>
+          </Link>
+          <Link
+            as={NavLink}
+            to="/saves"
+            _activeLink={{
+              color: "GreenLight",
+              borderBottom: "1px solid",
+              borderColor: "YellowLight",
+            }}
+          >
+            <Text fontSize="lg" py={2}>
+              Saves
+            </Text>
+          </Link>
           <Button
             layerStyle="base"
             size="md"
@@ -60,6 +93,8 @@ const Hamburger = () => {
             px={10}
             py={6}
             mt={2}
+            bg="GreenLight"
+            color={"white"}
             _hover={{
               background: "Hover.GreenLight",
             }}

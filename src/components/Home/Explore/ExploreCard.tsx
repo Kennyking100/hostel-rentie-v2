@@ -102,12 +102,13 @@ const ExploreCard: React.FC<Props> = ({ name, price, imgSrc }) => {
         <Btn
           h={"full"}
           _hover={{
-            opacity: 0.85,
+            opacity: 1,
           }}
           bg="white"
           color="#01923F"
           boxShadow="5px 5px 15px #1D1D1D1A"
           fontSize={{ base: "1.125rem", md: "1.3125rem" }}
+          cursor="default"
         >
           {price}
         </Btn>
