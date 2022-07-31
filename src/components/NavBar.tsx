@@ -6,14 +6,16 @@ import {
   Flex,
   HStack,
   Image,
+  Link,
   Text,
 } from "@chakra-ui/react";
 import Logo from "../assets/home/logo.png";
 import Hamburger from "./helpers/Hamburger";
+import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
   return (
-    <Box boxShadow="lg" h={"navBarHeight"}>
+    <Box boxShadow="lg" h={"navBarHeight"} mb="3.375rem">
       <Container
         maxW={{
           base: "container.sm",
@@ -35,15 +37,47 @@ const NavBar = () => {
             color="#144B34"
             display={{ base: "none", md: "flex" }}
           >
-            <Text fontSize="xl">Home</Text>
-            <Text fontSize="xl">Search</Text>
-            <Text fontSize="xl">Saves</Text>
+            <Link
+              as={NavLink}
+              to="/"
+              _activeLink={{
+                color: "GreenLight",
+                borderBottom: "1px solid",
+                borderColor: "YellowLight",
+              }}
+            >
+              <Text fontSize="xl">Home</Text>
+            </Link>
+            <Link
+              as={NavLink}
+              to="/search"
+              _activeLink={{
+                color: "GreenLight",
+                borderBottom: "1px solid",
+                borderColor: "YellowLight",
+              }}
+            >
+              <Text fontSize="xl">Search</Text>
+            </Link>
+            <Link
+              as={NavLink}
+              to="/saves"
+              _activeLink={{
+                color: "GreenLight",
+                borderBottom: "1px solid",
+                borderColor: "YellowLight",
+              }}
+            >
+              <Text fontSize="xl">Saves</Text>
+            </Link>
             <Button
               layerStyle="base"
               size="md"
               fontSize="xl"
               px={10}
               py={6}
+              bg="GreenLight"
+              color={"white"}
               _hover={{
                 background: "Hover.GreenLight",
               }}

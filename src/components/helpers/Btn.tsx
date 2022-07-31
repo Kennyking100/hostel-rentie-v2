@@ -5,11 +5,11 @@ const Btn = (props: any) => {
   return (
     <Button
       size="lg"
-      textStyle={"popM28"}
       borderRadius={"10px"}
-      px={10}
+      px={"49px"}
       py={8}
       fontWeight="medium"
+      boxShadow="5px 5px 15px #1D1D1D26"
       {...props}
     >
       {props.children}
