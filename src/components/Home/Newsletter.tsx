@@ -1,4 +1,4 @@
-import { Box, Container, Flex, Heading, Input, Text } from "@chakra-ui/react";
+import { Box, Container, Flex, Input, Text } from "@chakra-ui/react";
 import React from "react";
 import Btn from "../helpers/Btn";
 
@@ -25,7 +25,6 @@ const Newsletter = () => {
         mb={180}
         mt={"105px"}
       >
-        {/* size="xl" */}
         <Box as="h3" textStyle="h3" fontWeight={"semibold"} color={"GreenDark"}>
           Our Newsletter
         </Box>

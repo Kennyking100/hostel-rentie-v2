@@ -1,4 +1,4 @@
-import { Box, Container, Flex, Heading, Image } from "@chakra-ui/react";
+import { Box, Container, Flex, Image } from "@chakra-ui/react";
 import React from "react";
 import bgImg from "../../../assets/home/explore-bg-image.svg";
 import ExploreCard from "./ExploreCard";
@@ -62,7 +62,6 @@ const Explore = () => {
           <Box
             fontWeight={"bold"}
             color="white"
-            // fontSize={{ base: "2rem", md: "3.25rem" }}
             textAlign="center"
             position="relative"
             maxW={"max-content"}
@@ -81,7 +80,7 @@ const Explore = () => {
               height={"3px"}
               width={"70%"}
               backgroundColor={"#EFE307"}
-              ml={"-34px"}
+              ml={{ base: 0, md: "-34px" }}
               bottom="-15px"
             />
             <Box
@@ -121,7 +120,6 @@ const Explore = () => {
             fontWeight={"500"}
             textDecor="underline"
             textColor={"white"}
-            // fontSize={"4xl"}
             textStyle="h3"
             m="auto"
             w={"max-content"}

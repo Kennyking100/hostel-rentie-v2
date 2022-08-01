@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, Text } from "@chakra-ui/react";
+import { Box, Flex, Text } from "@chakra-ui/react";
 import React from "react";
 import Btn from "../../helpers/Btn";
 
@@ -42,7 +42,6 @@ const DetailsCard: React.FC<Props> = ({
       textAlign={"center"}
       mb="3rem"
     >
-      {/* size="lg" */}
       <Box as="h3" textStyle="h4" fontWeight={"semibold"} color={headingColor}>
         {headingText}
       </Box>
@@ -55,7 +54,6 @@ const DetailsCard: React.FC<Props> = ({
       >
         {image}
       </Flex>
-      {/* fontSize="sm"  */}
       <Text color={subColor} textStyle="body" fontStyle={"italic"}>
         {subText}
       </Text>
@@ -65,7 +63,6 @@ const DetailsCard: React.FC<Props> = ({
         {...btnProps}
         my="18px"
         px={16}
-        // fontSize={"1.3125rem"}
         onClick={clickHandler}
       >
         {btnText}
