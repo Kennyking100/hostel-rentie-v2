@@ -100,7 +100,7 @@ const ExploreCard: React.FC<Props> = ({ name, price, imgSrc }) => {
         }}
         color={"white"}
         gap="25px"
-        templateRows={"75px"}
+        templateRows={"60px"}
       >
         <GridItem
           colSpan={{ base: 2, md: 1, lg: 2, xl: 1 }}

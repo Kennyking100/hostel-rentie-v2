@@ -32,13 +32,13 @@ export const theme = extendTheme({
   },
   textStyles: {
     h1: {
-      fontSize: { base: "37px", md: "50px", lg: "67px" },
+      fontSize: { base: "50px", lg: "67px" },
     },
     h2: {
-      fontSize: { base: "28px", md: "37px", lg: "50px" },
+      fontSize: { base: "37px", lg: "50px" },
     },
     h3: {
-      fontSize: { base: "21px", md: "28px", lg: "37px" },
+      fontSize: { base: "28px", lg: "37px" },
     },
     h4: {
       fontSize: { base: "21px", md: "28px" },
