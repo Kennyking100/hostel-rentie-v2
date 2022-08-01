@@ -59,15 +59,16 @@ const Explore = () => {
             xl: "container.xl",
           }}
         >
-          <Heading
+          <Box
             fontWeight={"bold"}
             color="white"
-            fontSize={{ base: "2rem", md: "3.25rem" }}
+            // fontSize={{ base: "2rem", md: "3.25rem" }}
             textAlign="center"
             position="relative"
             maxW={"max-content"}
             m={"auto"}
             mt={{ base: "3rem", lg: "auto" }}
+            textStyle="h2"
             as={motion.div}
             variants={ExploreVariant}
             initial="hidden"
@@ -92,7 +93,7 @@ const Explore = () => {
               bottom="-37.5px"
               right={"0"}
             />
-          </Heading>
+          </Box>
 
           <Flex mt="10.375rem" justifyContent={"space-between"} flexWrap="wrap">
             <ExploreCard
@@ -120,7 +121,8 @@ const Explore = () => {
             fontWeight={"500"}
             textDecor="underline"
             textColor={"white"}
-            fontSize={"4xl"}
+            // fontSize={"4xl"}
+            textStyle="h3"
             m="auto"
             w={"max-content"}
             mt={"10rem"}

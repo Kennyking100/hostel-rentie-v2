@@ -62,16 +62,18 @@ const ExploreCard: React.FC<Props> = ({ name, price, imgSrc }) => {
           objectFit={"cover"}
         />
       </Box>
-      <Heading mt={"39px"} color="white" fontWeight={"semibold"} size="xl">
+      {/* size="xl" */}
+      <Box mt={"39px"} color="white" fontWeight={"semibold"} textStyle="h3">
         {name}
-      </Heading>
+      </Box>
       <Flex
         justifyContent={"space-evenly"}
         flexWrap="wrap"
         color={"white"}
         mt="24px"
         mb="39.5px"
-        fontSize={{ base: "md", lg: "lg" }}
+        // fontSize={{ base: "md", lg: "lg" }}
+        textStyle="body"
         fontWeight="500"
         gap={"0.4rem"}
       >
@@ -112,7 +114,7 @@ const ExploreCard: React.FC<Props> = ({ name, price, imgSrc }) => {
             }}
             bg="GreenDark"
             boxShadow="5px 5px 15px #1D1D1D1A"
-            fontSize={{ base: "1.125rem", md: "1.3125rem" }}
+            // fontSize={{ base: "1.125rem", md: "1.3125rem" }}
             onClick={() => navigate("/search/new")}
             className="btn-three"
           >
@@ -128,7 +130,7 @@ const ExploreCard: React.FC<Props> = ({ name, price, imgSrc }) => {
           bg="white"
           color="#01923F"
           boxShadow="5px 5px 15px #1D1D1D1A"
-          fontSize={{ base: "1.125rem", md: "1.3125rem" }}
+          // fontSize={{ base: "1.125rem", md: "1.3125rem" }}
           cursor="default"
         >
           {price}

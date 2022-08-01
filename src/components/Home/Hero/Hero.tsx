@@ -57,8 +57,10 @@ const Hero = () => {
         <Box width={{ base: "100%", lg: "50%" }}>
           <Box
             textColor={"GreenLight"}
+            as="h1"
             // size="4xl"
-            fontSize={{ base: "2.25rem", sm: "3rem", lg: "4rem" }}
+            // fontSize={{ base: "2.25rem", sm: "3rem", lg: "4rem" }}
+            textStyle="h1"
             // lineHeight={{ base: "54px", sm: "72px", lg: "102px" }}
             fontWeight="medium"
             textAlign={{ base: "center", sm: "start" }}
@@ -111,7 +113,8 @@ const Hero = () => {
           </Box>
           <Text
             textColor={"Grey1D"}
-            fontSize={{ base: "lg", lg: "lg" }}
+            // fontSize={{ base: "lg", lg: "lg" }}
+            textStyle="body"
             mt="47px"
             mb={"70px"}
             textAlign={{ base: "center", sm: "start" }}
@@ -126,7 +129,7 @@ const Hero = () => {
             width={{ base: "100%", sm: "max-content" }}
             mb={{ base: "1rem", sm: "0" }}
             color={"white"}
-            fontSize={"1.3125rem"}
+            // fontSize={"1.3125rem"}
             _hover={{
               background: "Hover.GreenDark",
             }}
@@ -139,7 +142,7 @@ const Hero = () => {
             width={{ base: "100%", sm: "max-content" }}
             bg="GreenLight"
             color={"white"}
-            fontSize={"1.3125rem"}
+            // fontSize={"1.3125rem"}
             _hover={{
               background: "Hover.GreenLight",
             }}

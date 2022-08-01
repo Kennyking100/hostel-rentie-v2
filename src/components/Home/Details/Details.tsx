@@ -1,4 +1,4 @@
-import { Container, Flex, Heading } from "@chakra-ui/react";
+import { Box, Container, Flex, Heading } from "@chakra-ui/react";
 import React from "react";
 import DetailsCard from "./DetailsCard";
 import { ReactComponent as ApplyIcon } from "../../../assets/home/apply-details.svg";
@@ -18,15 +18,16 @@ const Details = () => {
       }}
       mt={{ base: "-20rem", lg: "0rem" }}
     >
-      <Heading
+      <Box
         fontWeight={"bold"}
         color="GreenLight"
         textAlign="center"
         mb="6rem"
-        size={{ base: "xl", md: "2xl" }}
+        // size={{ base: "xl", md: "2xl" }}
+        textStyle="h3"
       >
         Do You Know You Can?
-      </Heading>
+      </Box>
 
       <Flex justifyContent={"space-between"} flexWrap={"wrap"}>
         <DetailsCard
