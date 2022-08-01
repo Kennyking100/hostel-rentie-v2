@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Container, Flex, Heading, Text } from "@chakra-ui/react";
+import { Box, Container, Flex, Text } from "@chakra-ui/react";
 import Btn from "../helpers/Btn";
 
 export const TextS = "5px 5px 15px #1D1D1D1A";
@@ -16,16 +16,17 @@ const SearchItemDetails = () => {
     >
       <Flex px={{ base: 4, sm: 8 }} mb="7.375rem" flexDir={"column"}>
         <Flex justifyContent={"space-between"} flexWrap="wrap">
-          <Heading
+          <Box
             fontWeight={"medium"}
-            size="2xl"
             textColor={"GreenLight"}
             textShadow={TextS}
             m={{ base: "auto", sm: "0" }}
             mb={4}
+            as="h2"
+            textStyle="h2"
           >
             Funaab
-          </Heading>
+          </Box>
           <Btn
             bg="YellowLight"
             width={{ base: "100%", sm: "max-content" }}
@@ -47,6 +48,7 @@ const SearchItemDetails = () => {
           fontStyle={"italic"}
           fontSize="1.1875rem"
           textAlign={{ base: "center", sm: "start" }}
+          textStyle="body"
         >
           14, Abode street, Abeokuta , Ogun state
         </Text>
@@ -56,7 +58,7 @@ const SearchItemDetails = () => {
           color={"GreenLight"}
           mt="29px"
           mb="79px"
-          fontSize={{ base: "md", lg: "3xl" }}
+          textStyle="h4"
           fontWeight="500"
           gap={"22.5px"}
           alignSelf="flex-start"
@@ -71,7 +73,7 @@ const SearchItemDetails = () => {
         </Flex>
         <Box
           color={"Grey1D"}
-          fontSize={{ base: "md", lg: "lg" }}
+          textStyle="body"
           mb="5.8125rem"
           textAlign={{ base: "center", sm: "start" }}
         >
@@ -90,7 +92,6 @@ const SearchItemDetails = () => {
               bg="GreenDark"
               width={{ base: "100%", sm: "max-content" }}
               color={"white"}
-              fontSize={"1.3125rem"}
               _hover={{
                 background: "Hover.GreenDark",
               }}
@@ -103,7 +104,6 @@ const SearchItemDetails = () => {
               minW={{ base: "100%", sm: "310px", md: "auto" }}
               bg="GreenLight"
               color={"white"}
-              fontSize={"1.3125rem"}
               _hover={{
                 background: "Hover.GreenLight",
               }}
@@ -117,7 +117,6 @@ const SearchItemDetails = () => {
             width={{ base: "100%", sm: "max-content" }}
             mb={8}
             color={"white"}
-            fontSize={"1.3125rem"}
             _hover={{
               background: "Hover.GreenDark",
             }}

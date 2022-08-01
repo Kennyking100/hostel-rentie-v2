@@ -1,4 +1,4 @@
-import { Box, Container, Heading } from "@chakra-ui/react";
+import { Box, Container } from "@chakra-ui/react";
 import React from "react";
 import Newsletter from "../Home/Newsletter";
 import Layout from "../Layout";
@@ -7,14 +7,15 @@ import Recommendation from "../SingleSearchItem/Recommendation";
 
 const SavesPage = () => {
   const header = (
-    <Heading
+    <Box
       fontWeight={"bold"}
       color="white"
-      fontSize={{ base: "2.375rem", md: "3.375rem" }}
       textAlign="center"
       position="relative"
       maxW={"max-content"}
       mt={{ base: "3rem", lg: "auto" }}
+      textStyle="h2"
+      as="h2"
     >
       Saves
       <Box
@@ -31,7 +32,7 @@ const SavesPage = () => {
         backgroundColor={"#EFE307"}
         bottom="-32.5px"
       />
-    </Heading>
+    </Box>
   );
   return (
     <Layout>

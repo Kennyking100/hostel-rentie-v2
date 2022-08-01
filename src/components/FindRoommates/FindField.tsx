@@ -8,7 +8,7 @@ interface Props {
 const FindField: React.FC<Props> = ({ name }) => {
   return (
     <Flex justifyContent={"space-between"} flexDir="column">
-      <Text fontSize={"3xl"} fontWeight="semibold" color={"#2b2024"} mb={2}>
+      <Text textStyle={"h4"} fontWeight="semibold" color={"#2b2024"} mb={2}>
         {name}
       </Text>
       <Select

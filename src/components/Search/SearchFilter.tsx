@@ -1,4 +1,4 @@
-import { Box, Heading, Select } from "@chakra-ui/react";
+import { Box, Select } from "@chakra-ui/react";
 import React from "react";
 import Btn from "../helpers/Btn";
 import { BsFillCaretDownFill } from "react-icons/bs";
@@ -6,10 +6,11 @@ import { BsFillCaretDownFill } from "react-icons/bs";
 const SearchFilter = () => {
   return (
     <Box width={{ base: "100%", lg: "60%" }}>
-      <Heading
+      <Box
         fontWeight={"medium"}
         color="GreenLight"
-        size={"2xl"}
+        as="h2"
+        textStyle="h2"
         position="relative"
         maxW={"max-content"}
         mb="3.5rem"
@@ -31,7 +32,7 @@ const SearchFilter = () => {
           bottom="-1rem"
           right={"-50%"}
         />
-      </Heading>
+      </Box>
       <Select
         placeholder="Location"
         icon={<BsFillCaretDownFill />}

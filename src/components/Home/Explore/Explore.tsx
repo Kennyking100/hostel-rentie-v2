@@ -35,14 +35,15 @@ const Explore = () => {
         base: "100%",
         "2xl": "container.xl",
       }}
+      className="hero-bg-image"
       p={0}
     >
       <Box
         position="relative"
         pt="10.125rem"
-        pb={{ base: "40rem", lg: "17rem" }}
+        pb={{ base: "30rem", lg: "17rem" }}
       >
-        <Image
+        {/* <Image
           src={bgImg}
           position="absolute"
           top={"0"}
@@ -50,7 +51,7 @@ const Explore = () => {
           h="full"
           w={"full"}
           objectFit={"cover"}
-        />
+        /> */}
         <Container
           maxW={{
             base: "container.sm",
@@ -123,7 +124,7 @@ const Explore = () => {
             textStyle="h3"
             m="auto"
             w={"max-content"}
-            mt={"10rem"}
+            mb={"5rem"}
             onClick={() => navigate("/search")}
           >
             {"View more >>"}

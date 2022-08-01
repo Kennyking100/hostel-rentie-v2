@@ -1,4 +1,4 @@
-import { Box, Container, Flex, Heading, Image } from "@chakra-ui/react";
+import { Box, Container, Flex, Image } from "@chakra-ui/react";
 import React from "react";
 import ExploreCard from "../Home/Explore/ExploreCard";
 import Hostel1 from "../../assets/home/hostel-image1.png";
@@ -47,15 +47,16 @@ const SearchResult: React.FC<Props> = ({ headerComponent }) => {
             <>{headerComponent}</>
           ) : (
             <>
-              <Heading
+              <Box
                 fontWeight={"bold"}
                 color="white"
-                fontSize={{ base: "2.375rem", md: "3.375rem" }}
                 textAlign="center"
                 position="relative"
                 maxW={"max-content"}
                 m={"auto"}
                 mt={{ base: "3rem", lg: "auto" }}
+                textStyle="h2"
+                as="h2"
               >
                 Search Results
                 <Box
@@ -75,7 +76,7 @@ const SearchResult: React.FC<Props> = ({ headerComponent }) => {
                   bottom="-32.5px"
                   right={"0"}
                 />
-              </Heading>
+              </Box>
             </>
           )}
           <Flex mt="10.375rem" justifyContent={"space-between"} flexWrap="wrap">

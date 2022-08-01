@@ -1,4 +1,4 @@
-import { Container, Heading } from "@chakra-ui/react";
+import { Box, Container } from "@chakra-ui/react";
 import React from "react";
 import Layout from "../Layout";
 import Recommendation from "./Recommendation";
@@ -16,15 +16,16 @@ const SingleSearchItemPage = () => {
           xl: "container.xl",
         }}
       >
-        <Heading
-          size={"4xl"}
+        <Box
+          as="h1"
+          textStyle="h1"
           textShadow="5px 5px 15px #1D1D1D1A"
           color={"GreenLight"}
           fontWeight="medium"
           mb="3rem"
         >
           Queen’s Hostel
-        </Heading>
+        </Box>
       </Container>
       <SearchItemHero />
       <SearchItemDetails />
