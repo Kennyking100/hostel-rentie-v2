@@ -7,6 +7,24 @@ import Hostel2 from "../../../assets/home/hostel-image2.png";
 import Hostel3 from "../../../assets/home/hostel-image3.png";
 import Hostel4 from "../../../assets/home/hostel-image4.png";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
+
+const ExploreVariant = {
+  hidden: {
+    opacity: 0,
+    y: -20,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 0.5,
+      type: "spring",
+      bounce: 0.6,
+      duration: 0.3,
+    },
+  },
+};
 
 const Explore = () => {
   const navigate = useNavigate();
@@ -50,6 +68,11 @@ const Explore = () => {
             maxW={"max-content"}
             m={"auto"}
             mt={{ base: "3rem", lg: "auto" }}
+            as={motion.div}
+            variants={ExploreVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
           >
             Explore Around you
             <Box

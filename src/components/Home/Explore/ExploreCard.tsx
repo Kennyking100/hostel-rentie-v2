@@ -12,12 +12,27 @@ import React from "react";
 import Btn from "../../helpers/Btn";
 import { MdFavorite } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
+import { motion, Variants } from "framer-motion";
 
 interface Props {
   name: string;
   price: string;
   imgSrc: string;
 }
+
+const cardVariants: Variants = {
+  offscreen: {
+    y: 100,
+  },
+  onscreen: {
+    y: 0,
+    transition: {
+      type: "spring",
+      bounce: 0.4,
+      duration: 0.8,
+    },
+  },
+};
 
 const ExploreCard: React.FC<Props> = ({ name, price, imgSrc }) => {
   const navigate = useNavigate();
@@ -33,6 +48,11 @@ const ExploreCard: React.FC<Props> = ({ name, price, imgSrc }) => {
         border="2.25px solid #EFE307"
         borderRadius={"20px"}
         p={{ base: "1rem", sm: "1.125rem 1.875rem" }}
+        as={motion.div}
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ once: true }}
+        variants={cardVariants}
       >
         <Image
           src={imgSrc}
@@ -94,6 +114,7 @@ const ExploreCard: React.FC<Props> = ({ name, price, imgSrc }) => {
             boxShadow="5px 5px 15px #1D1D1D1A"
             fontSize={{ base: "1.125rem", md: "1.3125rem" }}
             onClick={() => navigate("/search/new")}
+            className="btn-three"
           >
             View room
           </Btn>

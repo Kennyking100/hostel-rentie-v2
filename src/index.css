@@ -88,3 +88,30 @@ svg {
     width: 100%;
   }
 }
+
+/*  */
+
+.btn-three {
+  color: #fff;
+  transition: all 0.5s;
+  position: relative;
+}
+
+.btn-three::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  transform: scale(1.2, 1.2);
+}
+.btn-three:hover::after {
+  opacity: 1;
+  transform: scale(1, 1);
+}
