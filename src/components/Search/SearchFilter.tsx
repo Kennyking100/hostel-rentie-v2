@@ -1,15 +1,54 @@
-import { Box, Heading, Select } from "@chakra-ui/react";
+import { Box, Select, useBreakpointValue } from "@chakra-ui/react";
 import React from "react";
 import Btn from "../helpers/Btn";
 import { BsFillCaretDownFill } from "react-icons/bs";
+import { motion } from "framer-motion";
+
+const SearchVariant = {
+  hidden: {
+    opacity: 0,
+    width: 0,
+  },
+  visible: {
+    opacity: 1,
+    width: "110%",
+    transition: {
+      duration: 0.5,
+    },
+  },
+};
+
+const SearchVariant2 = {
+  hidden: {
+    opacity: 0,
+    width: 0,
+  },
+  visible: {
+    opacity: 1,
+    width: "70%",
+    transition: {
+      duration: 0.5,
+    },
+  },
+};
 
 const SearchFilter = () => {
+  const variant = useBreakpointValue(
+    {
+      base: SearchVariant2,
+      md: SearchVariant,
+    },
+    {
+      fallback: "base",
+    }
+  );
   return (
     <Box width={{ base: "100%", lg: "60%" }}>
-      <Heading
+      <Box
         fontWeight={"medium"}
         color="GreenLight"
-        size={"2xl"}
+        as="h2"
+        textStyle="h2"
         position="relative"
         maxW={"max-content"}
         mb="3.5rem"
@@ -21,6 +60,11 @@ const SearchFilter = () => {
           height={"2.5px"}
           width={{ base: "70%", md: "110%" }}
           backgroundColor={"#EFE307"}
+          as={motion.div}
+          variants={variant}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
         />
         <Box
           position="absolute"
@@ -30,8 +74,13 @@ const SearchFilter = () => {
           mr={{ base: "5rem", md: "20px" }}
           bottom="-1rem"
           right={"-50%"}
+          as={motion.div}
+          variants={variant}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
         />
-      </Heading>
+      </Box>
       <Select
         placeholder="Location"
         icon={<BsFillCaretDownFill />}

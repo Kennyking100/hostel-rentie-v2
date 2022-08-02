@@ -1,8 +1,23 @@
-import { Box, Container, Flex, Heading } from "@chakra-ui/react";
+import { Box, Container, Flex } from "@chakra-ui/react";
 import React from "react";
 import ExploreCard from "../Home/Explore/ExploreCard";
 import Hostel1 from "../../assets/home/hostel-image1.png";
 import Hostel2 from "../../assets/home/hostel-image2.png";
+import { motion } from "framer-motion";
+
+const RecommendationVariant = {
+  hidden: {
+    opacity: 0,
+    width: 0,
+  },
+  visible: {
+    opacity: 1,
+    width: "100%",
+    transition: {
+      duration: 0.5,
+    },
+  },
+};
 
 const Recommendation = () => {
   return (
@@ -19,12 +34,13 @@ const Recommendation = () => {
       pb={0}
       mb="10rem"
     >
-      <Heading
+      <Box
         fontWeight={"bold"}
         color="white"
-        size={"2xl"}
         position="relative"
         mt={{ base: "3rem", lg: "auto" }}
+        textStyle="h3"
+        as="h3"
       >
         Recommendations
         <Box
@@ -33,8 +49,13 @@ const Recommendation = () => {
           width="100%"
           backgroundColor={"#EFE307"}
           bottom="-18px"
+          as={motion.div}
+          variants={RecommendationVariant}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
         />
-      </Heading>
+      </Box>
       <Flex mt="5rem" justifyContent={"space-between"} flexWrap="wrap">
         <ExploreCard name="Queens Hostel" price="N 138,000" imgSrc={Hostel1} />
         <ExploreCard name="Amore Hostel" price="N 175,000" imgSrc={Hostel2} />

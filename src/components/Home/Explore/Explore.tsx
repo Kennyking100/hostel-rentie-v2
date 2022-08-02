@@ -1,4 +1,4 @@
-import { Box, Container, Flex, Heading, Image } from "@chakra-ui/react";
+import { Box, Container, Flex, Image } from "@chakra-ui/react";
 import React from "react";
 import bgImg from "../../../assets/home/explore-bg-image.svg";
 import ExploreCard from "./ExploreCard";
@@ -7,6 +7,37 @@ import Hostel2 from "../../../assets/home/hostel-image2.png";
 import Hostel3 from "../../../assets/home/hostel-image3.png";
 import Hostel4 from "../../../assets/home/hostel-image4.png";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
+
+const ExploreVariant = {
+  hidden: {
+    opacity: 0,
+    width: 0,
+  },
+  visible: {
+    opacity: 1,
+    width: "70%",
+    transition: {
+      duration: 0.5,
+    },
+  },
+};
+
+const ArrowVariant = {
+  hidden: {
+    x: 0,
+    opacity: 1,
+  },
+  visible: {
+    x: [0, 10, -10, 0],
+    scale: [1, 0.9, 0.9, 1],
+    opacity: [1, 0, 0, 1],
+    transition: {
+      duration: 1,
+      repeat: Infinity,
+    },
+  },
+};
 
 const Explore = () => {
   const navigate = useNavigate();
@@ -15,16 +46,18 @@ const Explore = () => {
     <Container
       maxW={{
         base: "100%",
-        "2xl": "container.xl",
+        // "2xl": "container.xl",
       }}
+      className="hero-bg-image"
       p={0}
     >
       <Box
         position="relative"
         pt="10.125rem"
-        pb={{ base: "40rem", lg: "17rem" }}
+        pb={{ base: "30rem", lg: "17rem", "2xl": "10rem" }}
+        my={{ "2xl": "2rem" }}
       >
-        <Image
+        {/* <Image
           src={bgImg}
           position="absolute"
           top={"0"}
@@ -32,7 +65,7 @@ const Explore = () => {
           h="full"
           w={"full"}
           objectFit={"cover"}
-        />
+        /> */}
         <Container
           maxW={{
             base: "container.sm",
@@ -41,15 +74,15 @@ const Explore = () => {
             xl: "container.xl",
           }}
         >
-          <Heading
+          <Box
             fontWeight={"bold"}
             color="white"
-            fontSize={{ base: "2rem", md: "3.25rem" }}
             textAlign="center"
             position="relative"
             maxW={"max-content"}
             m={"auto"}
             mt={{ base: "3rem", lg: "auto" }}
+            textStyle="h2"
           >
             Explore Around you
             <Box
@@ -57,8 +90,13 @@ const Explore = () => {
               height={"3px"}
               width={"70%"}
               backgroundColor={"#EFE307"}
-              ml={"-34px"}
+              ml={{ base: 0, md: "-34px" }}
               bottom="-15px"
+              as={motion.div}
+              variants={ExploreVariant}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
             />
             <Box
               position="absolute"
@@ -68,8 +106,13 @@ const Explore = () => {
               mr={"20px"}
               bottom="-37.5px"
               right={"0"}
+              as={motion.div}
+              variants={ExploreVariant}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
             />
-          </Heading>
+          </Box>
 
           <Flex mt="10.375rem" justifyContent={"space-between"} flexWrap="wrap">
             <ExploreCard
@@ -93,18 +136,53 @@ const Explore = () => {
               imgSrc={Hostel4}
             />
           </Flex>
-          <Box
-            fontWeight={"500"}
-            textDecor="underline"
+          <Flex
+            justifyContent={"center"}
             textColor={"white"}
-            fontSize={"4xl"}
+            textStyle="h3"
             m="auto"
-            w={"max-content"}
-            mt={"10rem"}
-            onClick={() => navigate("/search")}
+            alignItems={"center"}
+            mb={"5rem"}
+            fontWeight={"500"}
+            position="relative"
+            maxW={"max-content"}
           >
-            {"View more >>"}
-          </Box>
+            <Box
+              textColor={"white"}
+              textStyle="h3"
+              w={"max-content"}
+              onClick={() => navigate("/search")}
+              mr={2}
+            >
+              View more{" "}
+            </Box>
+            <Box
+              as={motion.span}
+              variants={ArrowVariant}
+              initial="hidden"
+              animate="visible"
+              display={"inline-block"}
+            >
+              {">"}
+            </Box>{" "}
+            <Box
+              as={motion.span}
+              variants={ArrowVariant}
+              initial="hidden"
+              animate="visible"
+              display={"inline-block"}
+            >
+              {">"}
+            </Box>
+            <Box
+              position="absolute"
+              height={"1.5px"}
+              width="100%"
+              backgroundColor={"white"}
+              as={motion.div}
+              bottom={"8px"}
+            />
+          </Flex>
         </Container>
       </Box>
     </Container>

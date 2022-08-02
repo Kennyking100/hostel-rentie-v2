@@ -1,27 +1,20 @@
-import {
-  Box,
-  Center,
-  Flex,
-  Grid,
-  Heading,
-  Input,
-  Text,
-} from "@chakra-ui/react";
+import { Box, Center, Flex, Grid, Input, Text } from "@chakra-ui/react";
 import React from "react";
 import { AiOutlinePlus } from "react-icons/ai";
 
 const TopSection = () => {
   return (
     <Box pb={10} borderBottom="1px solid rgba(0, 0, 0, 0.2)">
-      <Heading
-        size={"4xl"}
+      <Box
         textShadow="5px 5px 15px #1D1D1D1A"
         color={"GreenLight"}
         fontWeight="medium"
         mb="1.875rem"
+        as="h1"
+        textStyle="h1"
       >
         Find roommate
-      </Heading>
+      </Box>
       <Flex
         justifyContent={"space-between"}
         alignItems="center"
@@ -36,7 +29,7 @@ const TopSection = () => {
               borderRadius={"full"}
               bg="YellowLight"
             ></Box>
-            <Text fontWeight={"light"} fontSize="lg">
+            <Text fontWeight={"light"} textStyle="body">
               Upload your apartment
             </Text>
           </Flex>
@@ -44,7 +37,7 @@ const TopSection = () => {
             gap={"0.5rem"}
             alignItems="center"
             fontWeight={"light"}
-            fontSize="lg"
+            textStyle="body"
           >
             <Box
               w={"15px"}
@@ -100,7 +93,7 @@ const TopSection = () => {
         </Grid>
       </Flex>
       <Flex gap={"2rem"} flexDir={{ base: "column", sm: "row" }}>
-        <Text fontSize={"3xl"} fontWeight="semibold" color={"#2b2024"}>
+        <Text textStyle={"h4"} fontWeight="semibold" color={"#2b2024"}>
           Description
         </Text>
         <Input

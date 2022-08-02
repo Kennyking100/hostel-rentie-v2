@@ -1,4 +1,10 @@
-import { Box, Container, Flex, Heading, Image } from "@chakra-ui/react";
+import {
+  Box,
+  Container,
+  Flex,
+  Image,
+  useBreakpointValue,
+} from "@chakra-ui/react";
 import React from "react";
 import ExploreCard from "../Home/Explore/ExploreCard";
 import Hostel1 from "../../assets/home/hostel-image1.png";
@@ -6,17 +12,55 @@ import Hostel2 from "../../assets/home/hostel-image2.png";
 import Hostel3 from "../../assets/home/hostel-image3.png";
 import Hostel4 from "../../assets/home/hostel-image4.png";
 import bgImg2 from "../../assets/search/search-bg-image.svg";
+import { motion } from "framer-motion";
+
+const SearchResultVariant = {
+  hidden: {
+    opacity: 0,
+    width: 0,
+  },
+  visible: {
+    opacity: 1,
+    width: "90%",
+    transition: {
+      duration: 0.5,
+    },
+  },
+};
+
+const SearchResultVariant2 = {
+  hidden: {
+    opacity: 0,
+    width: 0,
+  },
+  visible: {
+    opacity: 1,
+    width: "90%",
+    transition: {
+      duration: 0.5,
+    },
+  },
+};
 
 interface Props {
   headerComponent?: JSX.Element;
 }
 
 const SearchResult: React.FC<Props> = ({ headerComponent }) => {
+  const variant = useBreakpointValue(
+    {
+      base: SearchResultVariant2,
+      md: SearchResultVariant,
+    },
+    {
+      fallback: "base",
+    }
+  );
   return (
     <Container
       maxW={{
         base: "100%",
-        "2xl": "container.xl",
+        // "2xl": "container.xl",
       }}
       p={0}
       mt="5.0625rem"
@@ -47,15 +91,16 @@ const SearchResult: React.FC<Props> = ({ headerComponent }) => {
             <>{headerComponent}</>
           ) : (
             <>
-              <Heading
+              <Box
                 fontWeight={"bold"}
                 color="white"
-                fontSize={{ base: "2.375rem", md: "3.375rem" }}
                 textAlign="center"
                 position="relative"
                 maxW={"max-content"}
                 m={"auto"}
                 mt={{ base: "3rem", lg: "auto" }}
+                textStyle="h2"
+                as="h2"
               >
                 Search Results
                 <Box
@@ -65,6 +110,11 @@ const SearchResult: React.FC<Props> = ({ headerComponent }) => {
                   backgroundColor={"#EFE307"}
                   ml={{ base: "-14px", md: "-60px" }}
                   bottom="-18px"
+                  as={motion.div}
+                  variants={variant}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
                 />
                 <Box
                   position="absolute"
@@ -74,8 +124,13 @@ const SearchResult: React.FC<Props> = ({ headerComponent }) => {
                   mr={{ base: "-14px", md: "-60px" }}
                   bottom="-32.5px"
                   right={"0"}
+                  as={motion.div}
+                  variants={variant}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
                 />
-              </Heading>
+              </Box>
             </>
           )}
           <Flex mt="10.375rem" justifyContent={"space-between"} flexWrap="wrap">

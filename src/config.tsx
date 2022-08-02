@@ -30,4 +30,24 @@ export const theme = extendTheme({
   sizes: {
     navBarHeight: "92px",
   },
+  textStyles: {
+    h1: {
+      fontSize: { base: "50px", md: "67px" },
+    },
+    h2: {
+      fontSize: { base: "37px", md: "50px" },
+    },
+    h3: {
+      fontSize: { base: "28px", md: "37px" },
+    },
+    h4: {
+      fontSize: { base: "21px", md: "28px" },
+    },
+    body: {
+      fontSize: { base: "16px", md: "18px" },
+    },
+    btnText: {
+      fontSize: { base: "16px", md: "21px" },
+    },
+  },
 });

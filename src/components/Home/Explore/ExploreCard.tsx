@@ -4,7 +4,6 @@ import {
   Flex,
   Grid,
   GridItem,
-  Heading,
   Icon,
   Image,
 } from "@chakra-ui/react";
@@ -12,12 +11,28 @@ import React from "react";
 import Btn from "../../helpers/Btn";
 import { MdFavorite } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
+import { motion, Variants } from "framer-motion";
 
 interface Props {
   name: string;
   price: string;
   imgSrc: string;
 }
+
+const cardVariants: Variants = {
+  offscreen: {
+    y: 100,
+    opacity: 0,
+  },
+  onscreen: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: "tween",
+      duration: 0.5,
+    },
+  },
+};
 
 const ExploreCard: React.FC<Props> = ({ name, price, imgSrc }) => {
   const navigate = useNavigate();
@@ -33,6 +48,11 @@ const ExploreCard: React.FC<Props> = ({ name, price, imgSrc }) => {
         border="2.25px solid #EFE307"
         borderRadius={"20px"}
         p={{ base: "1rem", sm: "1.125rem 1.875rem" }}
+        as={motion.div}
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ once: true }}
+        variants={cardVariants}
       >
         <Image
           src={imgSrc}
@@ -42,16 +62,16 @@ const ExploreCard: React.FC<Props> = ({ name, price, imgSrc }) => {
           objectFit={"cover"}
         />
       </Box>
-      <Heading mt={"39px"} color="white" fontWeight={"semibold"} size="xl">
+      <Box mt={"39px"} color="white" fontWeight={"semibold"} textStyle="h3">
         {name}
-      </Heading>
+      </Box>
       <Flex
         justifyContent={"space-evenly"}
         flexWrap="wrap"
         color={"white"}
         mt="24px"
         mb="39.5px"
-        fontSize={{ base: "md", lg: "lg" }}
+        textStyle="body"
         fontWeight="500"
         gap={"0.4rem"}
       >
@@ -78,7 +98,7 @@ const ExploreCard: React.FC<Props> = ({ name, price, imgSrc }) => {
         }}
         color={"white"}
         gap="25px"
-        templateRows={"75px"}
+        templateRows={"60px"}
       >
         <GridItem
           colSpan={{ base: 2, md: 1, lg: 2, xl: 1 }}
@@ -92,8 +112,8 @@ const ExploreCard: React.FC<Props> = ({ name, price, imgSrc }) => {
             }}
             bg="GreenDark"
             boxShadow="5px 5px 15px #1D1D1D1A"
-            fontSize={{ base: "1.125rem", md: "1.3125rem" }}
             onClick={() => navigate("/search/new")}
+            className="btn-three"
           >
             View room
           </Btn>
@@ -107,13 +127,12 @@ const ExploreCard: React.FC<Props> = ({ name, price, imgSrc }) => {
           bg="white"
           color="#01923F"
           boxShadow="5px 5px 15px #1D1D1D1A"
-          fontSize={{ base: "1.125rem", md: "1.3125rem" }}
           cursor="default"
         >
           {price}
         </Btn>
         <Center
-          w={"89px"}
+          w={"70px"}
           h={"full"}
           borderRadius="10px"
           cursor={"pointer"}

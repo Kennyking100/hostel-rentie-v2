@@ -7,10 +7,11 @@ const Btn = (props: any) => {
       size="lg"
       borderRadius={"10px"}
       px={"49px"}
-      py={8}
+      height="60px"
       fontWeight="medium"
       boxShadow="5px 5px 15px #1D1D1D26"
       {...props}
+      textStyle="body"
     >
       {props.children}
     </Button>
