@@ -46,9 +46,16 @@ svg {
 .swiper-pagination-bullet-active {
   background-color: #01923f !important;
 }
+
+.swiper-pagination {
+  display: none;
+}
 @media (max-width: 768px) {
   .swiper-slide img {
     border-radius: 0;
+  }
+  .swiper-pagination {
+    display: block;
   }
   .swiper-pagination-bullet-active {
     background-color: #efe307 !important;
@@ -109,7 +116,7 @@ svg {
   transition: all 0.3s;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 10px;
-  transform: scale(1.2, 1.2);
+  transform: scaleY(1.2);
 }
 .btn-three:hover::after {
   opacity: 1;

@@ -90,7 +90,7 @@ const SearchItemDetails = () => {
           >
             <Btn
               bg="GreenDark"
-              width={{ base: "100%", sm: "max-content" }}
+              width={{ base: "100%", md: "max-content" }}
               color={"white"}
               _hover={{
                 background: "Hover.GreenDark",
@@ -100,8 +100,7 @@ const SearchItemDetails = () => {
               Apply as roommate
             </Btn>
             <Btn
-              width={{ base: "100%", sm: "max-content" }}
-              minW={{ base: "100%", sm: "310px", md: "auto" }}
+              width={{ base: "100%", md: "max-content" }}
               bg="GreenLight"
               color={"white"}
               _hover={{
@@ -114,7 +113,7 @@ const SearchItemDetails = () => {
           </Flex>
           <Btn
             bg="GreenDark"
-            width={{ base: "100%", sm: "max-content" }}
+            width={{ base: "100%", md: "max-content" }}
             mb={8}
             color={"white"}
             _hover={{

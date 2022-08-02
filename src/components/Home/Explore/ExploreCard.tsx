@@ -132,7 +132,7 @@ const ExploreCard: React.FC<Props> = ({ name, price, imgSrc }) => {
           {price}
         </Btn>
         <Center
-          w={"89px"}
+          w={"70px"}
           h={"full"}
           borderRadius="10px"
           cursor={"pointer"}

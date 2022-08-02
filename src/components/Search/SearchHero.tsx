@@ -1,7 +1,7 @@
-import { Box, Flex, Image, Text } from "@chakra-ui/react";
+import { Box, Flex, Text } from "@chakra-ui/react";
 import React from "react";
 import SearchBtn from "../helpers/SearchBtn";
-import SearchHeroImage from "../../assets/home/search-hero-image.svg";
+import SearchHeroImage from "./SearchHeroImage";
 
 const SearchHero = () => {
   return (
@@ -29,14 +29,7 @@ const SearchHero = () => {
         h="456px"
         position="relative"
       >
-        <Image
-          src={SearchHeroImage}
-          position="absolute"
-          left={0}
-          w="full"
-          objectFit="cover"
-          bottom={"-5rem"}
-        />
+        <SearchHeroImage />
       </Box>
     </Flex>
   );
