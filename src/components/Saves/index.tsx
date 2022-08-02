@@ -1,4 +1,4 @@
-import { Box, Container } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import React from "react";
 import Newsletter from "../Home/Newsletter";
@@ -78,16 +78,7 @@ const SavesPage = () => {
       <Box mt="-80px" mb={200}>
         <SearchResult headerComponent={header} />
       </Box>
-      <Container
-        maxW={{
-          base: "container.sm",
-          md: "container.md",
-          lg: "container.lg",
-          xl: "container.xl",
-        }}
-      >
-        <Recommendation />
-      </Container>
+      <Recommendation />
       <Box mt={{ base: "0", lg: "0rem" }}>
         <Newsletter />
       </Box>
