@@ -48,15 +48,42 @@ const Explore = () => {
         base: "100%",
         // "2xl": "container.xl",
       }}
-      className="hero-bg-image"
+      // className="hero-bg-image"
       p={0}
     >
       <Box
         position="relative"
         pt="10.125rem"
-        pb={{ base: "30rem", lg: "17rem", "2xl": "10rem" }}
-        my={{ "2xl": "2rem" }}
+        pb={{ base: "10rem", lg: "17rem" }}
+        // my={{ "2xl": "2rem" }}
+        // bg="#01923F"
       >
+        <Box
+          position={"absolute"}
+          h="full"
+          w={"full"}
+          clipPath={{
+            base: "polygon(50% 1%, 100% 0.5%, 100% 99.5%, 50% 99%, 0 99.5%, 0 0.5%)",
+            md: "polygon(50% 2%, 100% 1%, 100% 99%, 50% 98%, 0 99%, 0 1%)",
+            "2xl": "polygon(50% 3%, 100% 1%, 100% 99%, 50% 90%, 0 99%, 0 1%)",
+          }}
+          bg={"GreenLight"}
+          top={0}
+          zIndex={-1}
+        ></Box>
+        <Box
+          position={"absolute"}
+          h="full"
+          w={"full"}
+          clipPath={{
+            base: "polygon(50% 1%, 100% 0%, 100% 100%, 50% 99%, 0 100%, 0 0)",
+            md: "polygon(50% 2%, 100% 0%, 100% 100%, 50% 98%, 0 100%, 0 0)",
+            "2xl": "polygon(50% 3%, 100% 0%, 100% 100%, 50% 90%, 0 100%, 0 0)",
+          }}
+          bg={"#91C6A3"}
+          top={0}
+          zIndex={-2}
+        ></Box>
         {/* <Image
           src={bgImg}
           position="absolute"

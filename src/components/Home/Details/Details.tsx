@@ -16,7 +16,7 @@ const Details = () => {
         lg: "container.lg",
         xl: "container.xl",
       }}
-      mt={{ base: "-20rem", lg: "0rem" }}
+      mt={{ base: "2rem", lg: "0rem" }}
     >
       <Box
         fontWeight={"bold"}
