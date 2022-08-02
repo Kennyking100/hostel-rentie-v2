@@ -60,7 +60,7 @@ const SearchResult: React.FC<Props> = ({ headerComponent }) => {
     <Container
       maxW={{
         base: "100%",
-        "2xl": "container.xl",
+        // "2xl": "container.xl",
       }}
       p={0}
       mt="5.0625rem"

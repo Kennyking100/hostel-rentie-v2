@@ -46,7 +46,7 @@ const Explore = () => {
     <Container
       maxW={{
         base: "100%",
-        "2xl": "container.xl",
+        // "2xl": "container.xl",
       }}
       className="hero-bg-image"
       p={0}
@@ -54,7 +54,8 @@ const Explore = () => {
       <Box
         position="relative"
         pt="10.125rem"
-        pb={{ base: "30rem", lg: "17rem" }}
+        pb={{ base: "30rem", lg: "17rem", "2xl": "10rem" }}
+        my={{ "2xl": "2rem" }}
       >
         {/* <Image
           src={bgImg}
