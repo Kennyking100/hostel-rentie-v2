@@ -1,9 +1,38 @@
 import { Box, Container } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 import React from "react";
 import Newsletter from "../Home/Newsletter";
 import Layout from "../Layout";
 import SearchResult from "../Search/SearchResult";
 import Recommendation from "../SingleSearchItem/Recommendation";
+
+const SavesVariant = {
+  hidden: {
+    opacity: 0,
+    width: 0,
+  },
+  visible: {
+    opacity: 1,
+    width: "150%",
+    transition: {
+      duration: 0.5,
+    },
+  },
+};
+
+const SavesVariant2 = {
+  hidden: {
+    opacity: 0,
+    width: 0,
+  },
+  visible: {
+    opacity: 1,
+    width: "200%",
+    transition: {
+      duration: 0.5,
+    },
+  },
+};
 
 const SavesPage = () => {
   const header = (
@@ -24,6 +53,11 @@ const SavesPage = () => {
         width="150%"
         backgroundColor={"#EFE307"}
         bottom="-18px"
+        as={motion.div}
+        variants={SavesVariant}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
       />
       <Box
         position="absolute"
@@ -31,6 +65,11 @@ const SavesPage = () => {
         width="200%"
         backgroundColor={"#EFE307"}
         bottom="-32.5px"
+        as={motion.div}
+        variants={SavesVariant2}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
       />
     </Box>
   );

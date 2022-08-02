@@ -3,6 +3,21 @@ import React from "react";
 import ExploreCard from "../Home/Explore/ExploreCard";
 import Hostel1 from "../../assets/home/hostel-image1.png";
 import Hostel2 from "../../assets/home/hostel-image2.png";
+import { motion } from "framer-motion";
+
+const RecommendationVariant = {
+  hidden: {
+    opacity: 0,
+    width: 0,
+  },
+  visible: {
+    opacity: 1,
+    width: "100%",
+    transition: {
+      duration: 0.5,
+    },
+  },
+};
 
 const Recommendation = () => {
   return (
@@ -34,6 +49,11 @@ const Recommendation = () => {
           width="100%"
           backgroundColor={"#EFE307"}
           bottom="-18px"
+          as={motion.div}
+          variants={RecommendationVariant}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
         />
       </Box>
       <Flex mt="5rem" justifyContent={"space-between"} flexWrap="wrap">

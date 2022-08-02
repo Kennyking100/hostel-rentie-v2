@@ -12,16 +12,29 @@ import { motion } from "framer-motion";
 const ExploreVariant = {
   hidden: {
     opacity: 0,
-    y: -20,
+    width: 0,
   },
   visible: {
     opacity: 1,
-    y: 0,
+    width: "70%",
     transition: {
-      delay: 0.5,
-      type: "spring",
-      bounce: 0.6,
-      duration: 0.3,
+      duration: 0.5,
+    },
+  },
+};
+
+const ArrowVariant = {
+  hidden: {
+    x: 0,
+    opacity: 1,
+  },
+  visible: {
+    x: [0, 10, -10, 0],
+    scale: [1, 0.9, 0.9, 1],
+    opacity: [1, 0, 0, 1],
+    transition: {
+      duration: 1,
+      repeat: Infinity,
     },
   },
 };
@@ -69,11 +82,6 @@ const Explore = () => {
             m={"auto"}
             mt={{ base: "3rem", lg: "auto" }}
             textStyle="h2"
-            as={motion.div}
-            variants={ExploreVariant}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
           >
             Explore Around you
             <Box
@@ -83,6 +91,11 @@ const Explore = () => {
               backgroundColor={"#EFE307"}
               ml={{ base: 0, md: "-34px" }}
               bottom="-15px"
+              as={motion.div}
+              variants={ExploreVariant}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
             />
             <Box
               position="absolute"
@@ -92,6 +105,11 @@ const Explore = () => {
               mr={"20px"}
               bottom="-37.5px"
               right={"0"}
+              as={motion.div}
+              variants={ExploreVariant}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
             />
           </Box>
 
@@ -117,18 +135,53 @@ const Explore = () => {
               imgSrc={Hostel4}
             />
           </Flex>
-          <Box
-            fontWeight={"500"}
-            textDecor="underline"
+          <Flex
+            justifyContent={"center"}
             textColor={"white"}
             textStyle="h3"
             m="auto"
-            w={"max-content"}
+            alignItems={"center"}
             mb={"5rem"}
-            onClick={() => navigate("/search")}
+            fontWeight={"500"}
+            position="relative"
+            maxW={"max-content"}
           >
-            {"View more >>"}
-          </Box>
+            <Box
+              textColor={"white"}
+              textStyle="h3"
+              w={"max-content"}
+              onClick={() => navigate("/search")}
+              mr={2}
+            >
+              View more{" "}
+            </Box>
+            <Box
+              as={motion.span}
+              variants={ArrowVariant}
+              initial="hidden"
+              animate="visible"
+              display={"inline-block"}
+            >
+              {">"}
+            </Box>{" "}
+            <Box
+              as={motion.span}
+              variants={ArrowVariant}
+              initial="hidden"
+              animate="visible"
+              display={"inline-block"}
+            >
+              {">"}
+            </Box>
+            <Box
+              position="absolute"
+              height={"1.5px"}
+              width="100%"
+              backgroundColor={"white"}
+              as={motion.div}
+              bottom={"8px"}
+            />
+          </Flex>
         </Container>
       </Box>
     </Container>
