@@ -133,3 +133,8 @@ svg {
   background-size: cover;
   background-position-x: 51%;
 }
+
+/*  */
+.pretty-rating > div {
+  display: flex;
+}

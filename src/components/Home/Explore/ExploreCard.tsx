@@ -1,12 +1,4 @@
-import {
-  Box,
-  Center,
-  Flex,
-  Grid,
-  GridItem,
-  Icon,
-  Image,
-} from "@chakra-ui/react";
+import { Box, Center, Grid, GridItem, Icon, Image } from "@chakra-ui/react";
 import React from "react";
 import Btn from "../../helpers/Btn";
 import { MdFavorite } from "react-icons/md";
@@ -41,13 +33,13 @@ const ExploreCard: React.FC<Props> = ({ name, price, imgSrc }) => {
     <Box
       textAlign={"center"}
       w="full"
-      maxW={{ base: "100%", lg: "45%" }}
+      // maxW={{ base: "100%", lg: "25%" }}
       mb="10.25rem"
     >
       <Box
         border="2.25px solid #EFE307"
         borderRadius={"20px"}
-        p={{ base: "1rem", sm: "1.125rem 1.875rem" }}
+        p={{ base: "1rem", sm: "1.125rem 1.3rem" }}
         as={motion.div}
         initial="offscreen"
         whileInView="onscreen"
@@ -65,9 +57,8 @@ const ExploreCard: React.FC<Props> = ({ name, price, imgSrc }) => {
       <Box mt={"39px"} color="white" fontWeight={"semibold"} textStyle="h3">
         {name}
       </Box>
-      <Flex
-        justifyContent={"space-evenly"}
-        flexWrap="wrap"
+      <Grid
+        gridTemplateColumns={"1fr 1fr"}
         color={"white"}
         mt="24px"
         mb="39.5px"
@@ -78,7 +69,7 @@ const ExploreCard: React.FC<Props> = ({ name, price, imgSrc }) => {
         <Box as={"span"} pr={"22.5px"} borderRight="2.25px solid #EFE307">
           1 bedroom
         </Box>
-        <Box as={"span"} pr={"22.5px"} borderRight="2.25px solid #EFE307">
+        <Box as={"span"} pr={"22.5px"}>
           Shared toilet
         </Box>
         <Box as={"span"} pr={"22.5px"} borderRight="2.25px solid #EFE307">
@@ -87,7 +78,7 @@ const ExploreCard: React.FC<Props> = ({ name, price, imgSrc }) => {
         <Box as={"span"} fontWeight={"bold"}>
           Funaab
         </Box>
-      </Flex>
+      </Grid>
 
       <Grid
         templateColumns={{
@@ -100,10 +91,7 @@ const ExploreCard: React.FC<Props> = ({ name, price, imgSrc }) => {
         gap="25px"
         templateRows={"60px"}
       >
-        <GridItem
-          colSpan={{ base: 2, md: 1, lg: 2, xl: 1 }}
-          rowStart={{ base: 2, md: 1, lg: 2, xl: 1 }}
-        >
+        <GridItem colSpan={{ base: 2 }} rowStart={{ base: 2 }}>
           <Btn
             h={"full"}
             w={"full"}
@@ -132,7 +120,7 @@ const ExploreCard: React.FC<Props> = ({ name, price, imgSrc }) => {
           {price}
         </Btn>
         <Center
-          w={"70px"}
+          w={"full"}
           h={"full"}
           borderRadius="10px"
           cursor={"pointer"}

@@ -1,6 +1,10 @@
 import React from "react";
-import { Box, Container, Flex, Text } from "@chakra-ui/react";
+import { Box, Container, Flex, Icon, Text } from "@chakra-ui/react";
 import Btn from "../helpers/Btn";
+import DetailsBadge from "../helpers/DetailsBadge";
+import { MdSmokeFree, MdPets, MdFavorite } from "react-icons/md";
+import { TbLineHeight, TbLetterSpacing } from "react-icons/tb";
+import { FaGraduationCap } from "react-icons/fa";
 
 export const TextS = "5px 5px 15px #1D1D1D1A";
 
@@ -71,55 +75,55 @@ const SearchItemDetails = () => {
           </Box>
           <Box as={"span"}>Shared Kitchen</Box>
         </Flex>
-        <Box
-          color={"Grey1D"}
-          textStyle="body"
-          mb="5.8125rem"
-          textAlign={{ base: "center", sm: "start" }}
-        >
+        <Box color={"Grey1D"} textStyle="body" mb="5.8125rem">
           <Text>A very newly furnished apartment.</Text>
           <Text>With cctv camera Need just one roommate</Text>
           <Text>Preferably a female.</Text>
         </Box>
-        <Flex justifyContent={"space-between"} flexWrap="wrap">
-          <Flex
-            gap={"1rem"}
-            flexWrap="wrap"
-            mb={4}
-            w={{ base: "100%", sm: "auto" }}
-          >
-            <Btn
-              bg="GreenDark"
-              width={{ base: "100%", md: "max-content" }}
-              color={"white"}
-              _hover={{
-                background: "Hover.GreenDark",
-              }}
-              mb={8}
-            >
-              Apply as roommate
-            </Btn>
-            <Btn
-              width={{ base: "100%", md: "max-content" }}
-              bg="GreenLight"
-              color={"white"}
-              _hover={{
-                background: "Hover.GreenLight",
-              }}
-              mb={8}
-            >
-              Make a payment
-            </Btn>
-          </Flex>
+        <Box color={"Grey1D"} textStyle="body" mb="5.8125rem">
+          <Text>A very newly furnished apartment.</Text>
+          <Text>With cctv camera Need just one roommate</Text>
+          <Text>Preferably a female.</Text>
+        </Box>
+        <Box color={"Grey1D"} textStyle="body" mb="5.8125rem">
+          <Text>A very newly furnished apartment.</Text>
+          <Text>With cctv camera Need just one roommate</Text>
+          <Text>Preferably a female.</Text>
+        </Box>
+        <Flex gap={"0.5rem"} flexWrap="wrap" mb="5.8125rem">
+          <DetailsBadge icon={<MdSmokeFree />} name="Non-smoker" />
+          <DetailsBadge icon={<MdPets />} name="No Pets" />
+          <DetailsBadge icon={<TbLineHeight />} name="135 cm" />
+          <DetailsBadge icon={<TbLetterSpacing />} name="English" />
+          <DetailsBadge icon={<FaGraduationCap />} name="Final year" />
+        </Flex>
+        <Flex
+          gap={"1rem"}
+          flexWrap="wrap"
+          mb={4}
+          w={{ base: "100%", sm: "auto" }}
+        >
           <Btn
             bg="GreenDark"
             width={{ base: "100%", md: "max-content" }}
-            mb={8}
             color={"white"}
             _hover={{
               background: "Hover.GreenDark",
             }}
+            mb={8}
           >
+            Apply as roommate
+          </Btn>
+          <Btn
+            width={{ base: "100%", md: "max-content" }}
+            bg="GreenLight"
+            color={"white"}
+            _hover={{
+              background: "Hover.GreenLight",
+            }}
+            mb={8}
+          >
+            <Icon as={MdFavorite} w="25px" h={"25px"} mr={4} />
             Save
           </Btn>
         </Flex>

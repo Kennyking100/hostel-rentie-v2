@@ -1,6 +1,5 @@
-import { Box, Container, Flex, Image } from "@chakra-ui/react";
+import { Box, Container, Flex, Grid } from "@chakra-ui/react";
 import React from "react";
-import bgImg from "../../../assets/home/explore-bg-image.svg";
 import ExploreCard from "./ExploreCard";
 import Hostel1 from "../../../assets/home/hostel-image1.png";
 import Hostel2 from "../../../assets/home/hostel-image2.png";
@@ -57,15 +56,6 @@ const Explore = () => {
         pb={{ base: "30rem", lg: "17rem", "2xl": "10rem" }}
         my={{ "2xl": "2rem" }}
       >
-        {/* <Image
-          src={bgImg}
-          position="absolute"
-          top={"0"}
-          zIndex={"-1"}
-          h="full"
-          w={"full"}
-          objectFit={"cover"}
-        /> */}
         <Container
           maxW={{
             base: "container.sm",
@@ -114,7 +104,11 @@ const Explore = () => {
             />
           </Box>
 
-          <Flex mt="10.375rem" justifyContent={"space-between"} flexWrap="wrap">
+          <Grid
+            mt="10.375rem"
+            gridTemplateColumns={"repeat(auto-fill,minmax(288px,1fr))"}
+            gap="5rem"
+          >
             <ExploreCard
               name="Queens Hostel"
               price="N 138,000"
@@ -135,7 +129,17 @@ const Explore = () => {
               price="N 300,000"
               imgSrc={Hostel4}
             />
-          </Flex>
+            <ExploreCard
+              name="Villa Homes"
+              price="N 300,000"
+              imgSrc={Hostel4}
+            />
+            <ExploreCard
+              name="Villa Homes"
+              price="N 300,000"
+              imgSrc={Hostel4}
+            />
+          </Grid>
           <Flex
             justifyContent={"center"}
             textColor={"white"}
