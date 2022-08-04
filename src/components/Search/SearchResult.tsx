@@ -1,7 +1,7 @@
 import {
   Box,
   Container,
-  Flex,
+  Grid,
   Image,
   useBreakpointValue,
 } from "@chakra-ui/react";
@@ -60,7 +60,6 @@ const SearchResult: React.FC<Props> = ({ headerComponent }) => {
     <Container
       maxW={{
         base: "100%",
-        // "2xl": "container.xl",
       }}
       p={0}
       mt="5.0625rem"
@@ -133,7 +132,11 @@ const SearchResult: React.FC<Props> = ({ headerComponent }) => {
               </Box>
             </>
           )}
-          <Flex mt="10.375rem" justifyContent={"space-between"} flexWrap="wrap">
+          <Grid
+            mt="10.375rem"
+            gridTemplateColumns={"repeat(auto-fill,minmax(288px,1fr))"}
+            columnGap={"5rem"}
+          >
             <ExploreCard
               name="Queens Hostel"
               price="N 138,000"
@@ -154,7 +157,7 @@ const SearchResult: React.FC<Props> = ({ headerComponent }) => {
               price="N 300,000"
               imgSrc={Hostel4}
             />
-          </Flex>
+          </Grid>
         </Container>
       </Box>
     </Container>

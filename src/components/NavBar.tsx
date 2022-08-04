@@ -15,7 +15,15 @@ import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
   return (
-    <Box boxShadow="lg" h={"navBarHeight"} mb="3.375rem">
+    <Box
+      boxShadow="lg"
+      h={"navBarHeight"}
+      mb="3.375rem"
+      position={"sticky"}
+      top={0}
+      zIndex={100}
+      bg="white"
+    >
       <Container
         maxW={{
           base: "container.sm",

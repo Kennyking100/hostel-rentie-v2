@@ -1,4 +1,4 @@
-import { Box, Container, Flex } from "@chakra-ui/react";
+import { Box, Container, Grid } from "@chakra-ui/react";
 import React from "react";
 import ExploreCard from "../Home/Explore/ExploreCard";
 import Hostel1 from "../../assets/home/hostel-image1.png";
@@ -56,10 +56,15 @@ const Recommendation = () => {
           viewport={{ once: true }}
         />
       </Box>
-      <Flex mt="5rem" justifyContent={"space-between"} flexWrap="wrap">
+      <Grid
+        mt="5rem"
+        gridTemplateColumns={"repeat(auto-fill,minmax(288px,1fr))"}
+        columnGap={"5rem"}
+      >
         <ExploreCard name="Queens Hostel" price="N 138,000" imgSrc={Hostel1} />
         <ExploreCard name="Amore Hostel" price="N 175,000" imgSrc={Hostel2} />
-      </Flex>
+        <ExploreCard name="Queens Hostel" price="N 138,000" imgSrc={Hostel1} />
+      </Grid>
     </Container>
   );
 };
