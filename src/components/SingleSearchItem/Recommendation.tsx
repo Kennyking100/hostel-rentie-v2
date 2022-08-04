@@ -59,7 +59,7 @@ const Recommendation = () => {
       <Grid
         mt="5rem"
         gridTemplateColumns={"repeat(auto-fill,minmax(288px,1fr))"}
-        gap="5rem"
+        columnGap={"5rem"}
       >
         <ExploreCard name="Queens Hostel" price="N 138,000" imgSrc={Hostel1} />
         <ExploreCard name="Amore Hostel" price="N 175,000" imgSrc={Hostel2} />

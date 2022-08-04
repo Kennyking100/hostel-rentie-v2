@@ -45,7 +45,6 @@ const Explore = () => {
     <Container
       maxW={{
         base: "100%",
-        // "2xl": "container.xl",
       }}
       className="hero-bg-image"
       p={0}
@@ -107,7 +106,7 @@ const Explore = () => {
           <Grid
             mt="10.375rem"
             gridTemplateColumns={"repeat(auto-fill,minmax(288px,1fr))"}
-            gap="5rem"
+            columnGap={"5rem"}
           >
             <ExploreCard
               name="Queens Hostel"

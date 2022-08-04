@@ -30,12 +30,7 @@ const ExploreCard: React.FC<Props> = ({ name, price, imgSrc }) => {
   const navigate = useNavigate();
 
   return (
-    <Box
-      textAlign={"center"}
-      w="full"
-      // maxW={{ base: "100%", lg: "25%" }}
-      mb="10.25rem"
-    >
+    <Box textAlign={"center"} w="full" mb="10.25rem">
       <Box
         border="2.25px solid #EFE307"
         borderRadius={"20px"}
@@ -81,12 +76,7 @@ const ExploreCard: React.FC<Props> = ({ name, price, imgSrc }) => {
       </Grid>
 
       <Grid
-        templateColumns={{
-          base: "1fr max-content",
-          md: "2fr 1fr max-content",
-          lg: "1fr max-content",
-          xl: "2fr 1fr max-content",
-        }}
+        templateColumns={"1fr 70px"}
         color={"white"}
         gap="25px"
         templateRows={"60px"}
