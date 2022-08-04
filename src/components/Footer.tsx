@@ -2,7 +2,7 @@ import { Box, Container, Flex, Icon, Text } from "@chakra-ui/react";
 import React from "react";
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 
-const subs = { base: "1rem", md: "1.125rem" };
+const subs = "0.875rem";
 const boxW = { base: "100%", sm: "45%", md: "30%" };
 const titleMb = "14px";
 const iconSize = "28px";
