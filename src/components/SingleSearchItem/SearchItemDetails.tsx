@@ -179,10 +179,24 @@ const SearchItemDetails = () => {
           </ModalBody>
 
           <ModalFooter bg="GreenLighter">
-            <Button bg="GreenLight" color={"white"} mr={3}>
+            <Button
+              bg="GreenLight"
+              color={"white"}
+              mr={3}
+              _hover={{
+                background: "Hover.GreenLight",
+              }}
+            >
               Submit
             </Button>
-            <Button bg="GreenDark" color={"white"} onClick={onClose}>
+            <Button
+              bg="GreenDark"
+              color={"white"}
+              onClick={onClose}
+              _hover={{
+                background: "Hover.GreenDark",
+              }}
+            >
               Cancel
             </Button>
           </ModalFooter>
