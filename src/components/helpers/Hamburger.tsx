@@ -41,13 +41,13 @@ const Hamburger = () => {
             position={"absolute"}
             top={navBarHeight}
             left={0}
-            w={"100vw"}
+            w={"100%"}
             h="100vh"
             onClick={() => setOpen((prev) => !prev)}
             zIndex={2}
           />
           <Box
-            w="100vw"
+            w="100%"
             border="none"
             borderTop={"1px solid #e2e8f0"}
             borderRadius="none"
