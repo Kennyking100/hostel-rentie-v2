@@ -23,6 +23,7 @@ const NavBar = () => {
       top={0}
       zIndex={100}
       bg="white"
+      overflowX="hidden"
     >
       <Container
         maxW={{
