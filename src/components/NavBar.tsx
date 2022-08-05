@@ -13,6 +13,8 @@ import Logo from "../assets/home/logo.png";
 import Hamburger from "./helpers/Hamburger";
 import { NavLink } from "react-router-dom";
 
+export const navBarHeight = 92;
+
 const NavBar = () => {
   const [sticky, setSticky] = useState(false);
 
@@ -26,7 +28,7 @@ const NavBar = () => {
 
   const isSticky = () => {
     const scrollTop = window.scrollY;
-    const stickyClass = scrollTop >= 92 ? true : false;
+    const stickyClass = scrollTop >= navBarHeight ? true : false;
     setSticky(stickyClass);
   };
 
@@ -35,7 +37,7 @@ const NavBar = () => {
       boxShadow="lg"
       h={"navBarHeight"}
       mb="3.375rem"
-      position={sticky ? "sticky" : "static"}
+      position={sticky ? "sticky" : "relative"}
       top={sticky ? 0 : ""}
       zIndex={sticky ? 100 : ""}
       bg="white"
