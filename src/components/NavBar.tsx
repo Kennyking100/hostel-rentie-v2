@@ -8,6 +8,7 @@ import {
   Image,
   Link,
   Text,
+  useMediaQuery,
 } from "@chakra-ui/react";
 import Logo from "../assets/home/logo.png";
 import Hamburger from "./helpers/Hamburger";
@@ -15,6 +16,7 @@ import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
   const [sticky, setSticky] = useState(false);
+  const [isSmallerThan30] = useMediaQuery("(max-width: 30em)");
 
   // on render, set listener
   useEffect(() => {
@@ -39,7 +41,6 @@ const NavBar = () => {
       top={sticky ? 0 : ""}
       zIndex={sticky ? 100 : ""}
       bg="white"
-      overflow="hidden"
     >
       <Container
         maxW={{
@@ -110,7 +111,7 @@ const NavBar = () => {
               Account
             </Button>
           </HStack>
-          <Hamburger />
+          {isSmallerThan30 && <Hamburger />}
         </Flex>
       </Container>
     </Box>
