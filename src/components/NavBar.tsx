@@ -16,7 +16,7 @@ import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
   const [sticky, setSticky] = useState(false);
-  const [isSmallerThan30] = useMediaQuery("(max-width: 30em)");
+  const [isSmallerThan30] = useMediaQuery("(max-width: 48em)");
 
   // on render, set listener
   useEffect(() => {
