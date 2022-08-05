@@ -38,6 +38,7 @@ const Hamburger = () => {
         pb={10}
         shadow="md"
         zIndex={2}
+        display={open ? "block" : "none"}
       >
         <Container
           maxW={{
