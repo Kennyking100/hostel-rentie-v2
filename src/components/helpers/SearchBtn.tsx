@@ -4,7 +4,7 @@ import SearchIcon from "../../assets/home/search-icon.svg";
 
 const SearchBtn = () => {
   return (
-    <Flex gap={10} alignItems="center" mt="84px" height={"62px"}>
+    <Flex gap={10} alignItems="center" mt="84px" height={"58px"}>
       <Input
         placeholder="Search"
         border={`3px solid`}
@@ -18,7 +18,7 @@ const SearchBtn = () => {
       <Center
         borderRadius={"100%"}
         bg="GreenLight"
-        width={"81px"}
+        width={"76px"}
         height="full"
         cursor={"pointer"}
         boxShadow="5px 5px 15px #1D1D1D26"

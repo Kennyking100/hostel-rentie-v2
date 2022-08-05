@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   Box,
   Button,
@@ -14,16 +14,32 @@ import Hamburger from "./helpers/Hamburger";
 import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
+  const [sticky, setSticky] = useState(false);
+
+  // on render, set listener
+  useEffect(() => {
+    window.addEventListener("scroll", isSticky);
+    return () => {
+      window.removeEventListener("scroll", isSticky);
+    };
+  }, []);
+
+  const isSticky = () => {
+    const scrollTop = window.scrollY;
+    const stickyClass = scrollTop >= 92 ? true : false;
+    setSticky(stickyClass);
+  };
+
   return (
     <Box
       boxShadow="lg"
       h={"navBarHeight"}
       mb="3.375rem"
-      position={"sticky"}
-      top={0}
-      zIndex={100}
+      position={sticky ? "sticky" : "static"}
+      top={sticky ? 0 : ""}
+      zIndex={sticky ? 100 : ""}
       bg="white"
-      overflowX="hidden"
+      overflow="hidden"
     >
       <Container
         maxW={{

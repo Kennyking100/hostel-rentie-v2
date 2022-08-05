@@ -13,11 +13,17 @@ import "swiper/css/bundle";
 const SearchItemHero = () => {
   return (
     <Container
+      // maxW={{
+      //   base: "100%",
+      //   "2xl": "container.xl",
+      // }}
+      p={{ base: 0, sm: "16px" }}
       maxW={{
-        base: "100%",
-        "2xl": "container.xl",
+        base: "container.sm",
+        md: "container.md",
+        lg: "container.lg",
+        xl: "container.xl",
       }}
-      p={0}
     >
       <Box h={"455px"} mb="5.1875rem">
         <Swiper
