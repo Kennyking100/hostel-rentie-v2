@@ -1,19 +1,10 @@
-import {
-  Box,
-  Center,
-  chakra,
-  Container,
-  Flex,
-  Image,
-  Input,
-  Text,
-} from "@chakra-ui/react";
+import { Box, chakra, Container, Flex, Image, Text } from "@chakra-ui/react";
 import { isValidMotionProp, motion } from "framer-motion";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import HeroImage from "../../../assets/home/hero-image.svg";
-import SearchIcon from "../../../assets/home/search-icon.svg";
 import Btn from "../../helpers/Btn";
+import SearchBtn from "../../helpers/SearchBtn";
 
 const Variant = {
   hidden: { opacity: 0, transform: "rotateY(95deg)" },
@@ -91,6 +82,7 @@ const Hero = () => {
                 if (ev === " ") return ev;
                 return (
                   <ChakraBox
+                    key={i}
                     display={"inline-block"}
                     variants={Variant}
                     initial={"hidden"}
@@ -119,7 +111,7 @@ const Hero = () => {
             and facilities of apartment with someone or people
           </Text>
           <Btn
-            mr={{ base: "0", sm: "50px" }}
+            mr={{ base: "0", sm: "30px", md: "50px" }}
             bg="GreenDark"
             width={{ base: "100%", sm: "max-content" }}
             mb={{ base: "1rem", sm: "0" }}
@@ -144,32 +136,7 @@ const Hero = () => {
             Join a room
           </Btn>
 
-          <Flex gap={10} alignItems="center" mt="84px" height={"62px"}>
-            <Input
-              placeholder="Search"
-              border={`3px solid`}
-              borderRadius="35px"
-              borderColor={"YellowLight"}
-              textColor="GreenDarker"
-              height="full"
-              boxShadow="5px 5px 15px #1D1D1D1A"
-              _placeholder={{ fontSize: "20px", paddingLeft: "20px" }}
-            />
-            <Center
-              borderRadius={"100%"}
-              bg="GreenLight"
-              width={"81px"}
-              height="full"
-              cursor={"pointer"}
-              boxShadow="5px 5px 15px #1D1D1D26"
-              _hover={{
-                background: "Hover.GreenLight",
-              }}
-              onClick={() => navigate("/search")}
-            >
-              <Image src={SearchIcon} width={"21px"} height={"21px"} />
-            </Center>
-          </Flex>
+          <SearchBtn />
         </Box>
         <Image
           src={HeroImage}

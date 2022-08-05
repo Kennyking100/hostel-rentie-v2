@@ -44,7 +44,7 @@ const ExploreCard: React.FC<Props> = ({ name, price, imgSrc }) => {
         <Image
           src={imgSrc}
           w={"100%"}
-          h={"264px"}
+          h={"200px"}
           borderRadius={"10px"}
           objectFit={"cover"}
         />
@@ -79,7 +79,7 @@ const ExploreCard: React.FC<Props> = ({ name, price, imgSrc }) => {
         templateColumns={"1fr 70px"}
         color={"white"}
         gap="25px"
-        templateRows={"60px"}
+        templateRows={"50px 60px"}
       >
         <GridItem colSpan={{ base: 2 }} rowStart={{ base: 2 }}>
           <Btn
@@ -98,7 +98,7 @@ const ExploreCard: React.FC<Props> = ({ name, price, imgSrc }) => {
         </GridItem>
 
         <Btn
-          h={"full"}
+          h={"50px"}
           _hover={{
             opacity: 1,
           }}
