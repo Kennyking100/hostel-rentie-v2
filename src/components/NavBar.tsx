@@ -39,7 +39,6 @@ const NavBar = () => {
       top={sticky ? 0 : ""}
       zIndex={sticky ? 100 : ""}
       bg="white"
-      overflow="hidden"
     >
       <Container
         maxW={{
